@@ -1,0 +1,158 @@
+% !TEX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = en_US
+
+%-------------------------------------------------------------------------------------------------
+%				LANGUAGE SETTINGS
+%--------------------------------------------------------------------------------------------------
+\usepackage[english, french, serbian]{babel}
+
+%--------------------------------------------------------------------------------------------------
+%				PAGE DIMENSIONS
+%--------------------------------------------------------------------------------------------------
+\usepackage[margin=1cm]{geometry}
+
+%--------------------------------------------------------------------------------------------------
+%				MATHS TOOLS
+%--------------------------------------------------------------------------------------------------
+%amsmath and amsfont have to be loaded before the xunicode package when XeTeX is used. The experimental package unicode-math will subsitute those packages when XeTeX is used. It is available in TeX Live 2012.
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{amsthm}% The amsthm package provides an enhanced version of LATEX's \newtheorem commandfor defining theorem-like environments.
+\usepackage{mathtools} % The mathtools package fixes some amsmath quirks and adds some useful settings, symbols, and environments to amsmath. The mathtools package loads the amsmath package and hence there is no need to \usepackage{amsmath} in the preamble if mathtools is used.
+
+%-------------------------------------------------------------------------------------------------
+%				FONT SETTINGS
+%-----------------------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}%utf encoding
+\usepackage[OT1, OT2, T1]{fontenc}
+\usepackage[exscale, amsfonts, amssymb]{concmath}
+\usepackage{fontawesome} %awesome font symbols
+\renewcommand*{\bfseries}{\mdseries}
+%\renewcommand{\familydefault}{\sfdefault}
+
+%--------------------------------------------------------------------------------------------------
+%					GRAPHICS
+%--------------------------------------------------------------------------------------------------
+% Packages for pictures adding
+\usepackage{float}
+\usepackage{graphicx} %insert images
+\usepackage{caption}
+\usepackage{subcaption}
+
+%--------------------------------------------------------------------------------------------------
+%			ADDITIONAL PACKAGES 
+%--------------------------------------------------------------------------------------------------
+% diverse package
+\usepackage{textcomp} %use specific symbols for text (example "°")
+\usepackage{multicol} %create multi column environment
+\usepackage{multirow}
+
+\usepackage[table]{xcolor}
+\usepackage{parskip} %remove indent
+\usepackage{titlesec}
+\usepackage{tikz}
+%--------------------------------------------------------------------------------------------------
+%			INDEX AND NOMENCLATURE 
+%--------------------------------------------------------------------------------------------------
+%\usepackage{nomencl}
+%\makenomenclature
+%\usepackage{makeidx}
+%\makeindex
+
+%--------------------------------------------------------------------------------------------------
+%					REFERENCES 
+%--------------------------------------------------------------------------------------------------
+\usepackage[backend=biber,
+bibstyle=ieee, 
+citestyle=numeric-comp,
+natbib=true,
+doi=false, 
+url=false,
+isbn=false,
+mincitenames=1,
+maxcitenames=1,
+minbibnames=1,
+maxbibnames=99,
+backref=false,]
+{biblatex}
+
+%------------------------------------------------------------------------------
+%	CUSTOM COLORS/COLUMNS/COMMANDS
+%------------------------------------------------------------------------------ 
+\definecolor{gray}{gray}{0.25}
+
+\newcolumntype{L}{>{\raggedleft}p{0.15\textwidth}}
+\newcolumntype{R}{p{0.75\textwidth}}
+\newcolumntype{D}{p{0.15\textwidth}}
+
+\titleformat{\section}{\color{red}\Large\bfseries}{\thesection}{}{}[\titlerule]
+
+
+\newcommand{\cvname}[1]{
+\begin{center} 
+	\huge --- #1 --- 
+\end{center}
+\vspace{0.5cm}}
+
+\newcommand{\cvjob}[1]{
+\begin{center} 
+	\color{red}\Large --- #1 --- 
+\end{center}
+\vspace{0.2cm}}
+
+%\cventry{start}{end}{job name}{Company}{Location}
+\newcommand{\cventry}[5]{\faCalendar\ #1 --- #2: \faTag\ #3 \\ \faIndustry\ #4 -- \faMapMarker\ #5}
+\newcommand{\cvedentry}[5]{\faCalendar\ #1 --- #2: \faGraduationCap\ #3 -- \faBook\ #4 -- \faMapMarker\ #5}
+
+%cvinfo{mail}{phone}{github}{adress}{ORCID}
+\newcommand{\cvinfo}[5]{\begin{minipage}{0.9\textwidth}
+	\begin{center}
+    \noindent \faEnvelopeO\ \href{mailto://#1}{#1} - \faMobilePhone\ #2 - \faGithub\ \href{https://www.#3}{#3} \\
+    \faGraduationCap\ \href{https://www.orcid.org/#5}{#5} \\
+	\faMapMarker\ #4
+\end{center}
+\end{minipage}}
+
+
+% custom list for detail in work experience
+\newenvironment{jobdetails}[1][T1]
+{\it \color{gray} \small \vspace{-10pt} 
+	\begin{itemize}
+    \setlength{\topsep}{0pt}		
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+	\fontencoding{#1}\selectfont}
+{ \end{itemize}                  } 
+
+% command for keping latin spelling in serbian cyrillic part
+\newcommand{\keeplatin}[1]{{\fontencoding{T1}\selectfont\ #1}}
+
+%--------------------------------------------------------------------------------------------------
+%			PDF PROPERTIES AND HYPERLINKS 
+%--------------------------------------------------------------------------------------------------
+
+% url links in document
+\usepackage{url}
+\usepackage{hyperref}
+
+%edit the properties of your PDF documents which will be displayed
+\hypersetup{
+    bookmarks=true, 		% show bookmarks bar?
+    unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,      % page fit to window when opened
+    pdftitle={CV},    % title
+    pdfauthor={M. Skocic},     % author
+    pdfsubject={Official},   % subject of the document
+    pdfnewwindow=true,      % links in new window
+    pdfkeywords={}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
