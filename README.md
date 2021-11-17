@@ -28,6 +28,8 @@ Education
 * 2012 --- 2015:  Engineer, Electrochemistry --  Grenoble INP (PHELMA) --  France
 * 2003 --- 2005:  Technician, Analytical Chemistry --  University of Metz --  France
 
+
+
 Language Skills
 ===============
 
@@ -46,3 +48,33 @@ Computer Skills
 * Oli
 * Comsol
 
+
+PhDs - Technical Mentoring
+===============================
+S. El Euch, “Recherche d’une corrélation entre caractéristiques électrochimiques et relâchement en nickel de
+l’alliage 690 en milieu primaire d’un réacteur à eau pressurisée,” Université Sorbonne, Paris, 2019.
+
+F. Da Fonseca, “Etude du phénomène de shadow corrosion des alliages de zirconium dans les réacteurs à eau
+bouillante (REB),” Université de Grenoble Alpes, Grenoble, 2021.
+J. Ben Mohamed, “Etude des mécanismes de Corrosion sous contrainte des alliages 600/690 en milieu secondaire
+des réacteurs REP en présence de plomb et de soufre.,” Ecole Nationale Supérieure des Mines de Saint-Etienne,
+Saint-Etienne, 2021.
+
+D. Peyret, “Mécanismes électrochimiques de la corrosion des alliages de type ZrNbX en condition simulées de
+réacteur à eau pressurisée,” Université Sorbonne, Paris, 2023.
+
+Publications
+================
+[1] K. Abu Samk, M. Skocic, H. Zurob, and O. Bouaziz, “Microtruss Cellular Nanocomposites”, TMS Annual
+Meeting, vol. 1, pp. 337–344, May 2012.
+
+[2] M. Skocic, D. Kaczorowski, D. Perche, and J.-C. Nuguet, “Paper Number 83: High Temperature (Photo-
+)Electrochemical setup for Studying Zr-based and Ni-based Alloys in Simulated LWR Conditions”, in NPC
+2016, Brighton, UK: Nuclear Institute, Oct. 3, 2016.
+
+[3] P. Barberis, M. Skocic, D. Kaczorowski, D. Perche, Y. Wouters, and K. Nowotka, “Shadow corrosion: Exper-
+iments and modeling”, Journal of Nuclear Materials, vol. 523, pp. 310–319, Sep. 1, 2019.
+
+[4] S. E. Euch, D. Bricault, H. Cachet, E. M. Sutter, M. T. Tran, V. Vivier, N. Engler, A. Marion, M. Skocic,
+and B. Huerta-Ortega, “Temperature dependence of the electrochemical behavior of the 690 Ni-base alloy
+between 25 and 325 °C”, Electrochimica Acta, vol. 317, pp. 509–520, Sep. 10, 2019.
