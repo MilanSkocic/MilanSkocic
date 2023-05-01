@@ -104,14 +104,13 @@
     \begin{center}
     \begin{tikzpicture}[text=white, border/.style={line width=20mm}]
 	\foreach \angle/\col [remember=\angle as \last (initially 0)] 
-	    in {90/blue, 150/orange, 170/gray, 200/red, 240/brown, 270/magenta, 330/cyan, 360/purple}{
+	    in {90/blue, 180/orange, 200/red, 240/brown, 270/magenta, 330/cyan, 360/purple}{
 		\draw[\col, border] (\last:2cm) arc[start angle=\last, end angle=\angle, radius=2cm];
 		\draw[white, line width=1mm] (\last:1.3)--++(\last:2.0);}
 		\node[line width=1mm, draw, circle, minimum width=2.5cm, white, fill=black]{Python};
 		\node at (45:2cm) {C/C++};
 		\node at (120:2cm) {Fortran};
-		\node at (160:2cm) {PHP};
-		\node at (185:2cm) {Bash};
+		\node at (190:2cm) {Bash};
 		\node at (220:2cm) {Matlab};
 		\node at (255:2cm) {\LaTeX};
 		\node at (300:2cm) {Oli};
