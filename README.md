@@ -17,6 +17,4 @@ C is a very powerfull compiled language which provides a lot of low level contro
 
 I rediscovered Fortran with an 30+ year old code written in Fortran 77 that needed to be recompiled on a newer OS. Naturely, I started to learn the new standards for Fortran (> f90) and all the great features that come with for mathematical formulas especially the matrix operations included by default in the Fortran language. 
 
-By rewriting some portions of the code with Modern Fortran, I saw that Modern Fortran features the best of Python and C i.e. simpicity for maths and execution speed. It became my favorite language for developing code for my daily use. The iso_c_binding feature allows to naturally expose Fortran routines to C code and therefore to plug them in a Python C extension. 
-
-I am still learning the specifities of compiler options where I am not an expert.
+By rewriting some portions of the code with Modern Fortran, I saw that Modern Fortran features the best of Python and C i.e. simpicity for maths and execution speed. It became my favorite language for developing code for my daily use. The iso_c_binding feature allows to naturally expose Fortran routines to C code and therefore to plug them in a Python C extension.
