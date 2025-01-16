@@ -6,7 +6,7 @@
 * [ORCID: 0000-0003-2189-5766](https://www.orcid.org/0000-0003-2189-5766)
 * 2500C Route de Saint Sernin, 71200 Saint Sernin du Bois
 
-Download the PDF versions: [EN](./cv-milan_skocic-en.pdf) [FR](./cv-milan_skocic-fr.pdf) [SRB](./cv-milan_skocic-sr.pdf)
+Download the PDF versions: [EN](./cv/cv-milan_skocic-en.pdf) [FR](./cv/cv-milan_skocic-fr.pdf) [SRB](./cv/cv-milan_skocic-sr.pdf)
 
 # About me
 
