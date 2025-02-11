@@ -1,5 +1,5 @@
 FNAME=main
-OUTNAME=pec
+OUTNAME=pec_basics_applications
 TEX=pdflatex
 BIB=biber
 VIEWER=sumatrapdf 
