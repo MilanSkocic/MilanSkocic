@@ -11,7 +11,6 @@ Nonetheless, the first studies focused on the understanding of the interfacial
 processes were performed much later 
 \citep{stimming1986-1,gerischer1966-1,copeland1942-1}.
 
-
 The basics of photoelectrochemistry and application examples are presented in 
 the following sections and they are largely described in the literature 
 \citep{morrison1980-1,gerischer1985-1,memming2008-1,marcus2006-1,bard2002-1,sato1998-1}. 
@@ -93,8 +92,72 @@ with respect to the semiconductor type.
 
 
 \subsection{Semiconductor/electrolyte interface in dark condition}
+A potential gradient occurs when a semiconductor comes into contact with an 
+electrolyte as shown in figure~\ref{fig_interface_potential}.
+The position of the Fermi level in the electrolyte with respect to the 
+conduction and valence band edges leads to three different situations after 
+a transient charge transfer. 
+The flat band situation occurs when the Fermi level in the electrolyte 
+matches the Fermi level in the semiconductor. 
+Consequently, there is no potential gradient in the semiconductor. 
+In a case of Fermi level mismatch, a band bending occurs in the semiconductor 
+near the semiconductor/electrolyte interface. 
+The band bending leads to either depletion or accumulation of majority 
+charge carriers near the semiconductor/electrolyte interface. 
+The spatial extension of the depletion/accumulation zone is called space 
+charge as shown in figure~\ref{fig_space_charge_depletion}.
 
+\input{figures/fig_interface_potential.tex}
+\input{figures/fig_space_charge_depletion}
 
+Depletion and accumulation as well as band bending can be obtained 
+by polarizing the semiconductor. 
+As long as the hypothesis described in the introduction paragraph stand, 
+the polarization does not modify the surface band edges $E_{cs}$ and $E_{vs}$. 
+Consequently, the polarization will only alter the band bending in the space 
+charge. 
+Depending on the applied potential, $U$, with respect to the flat band 
+potential, $U_fb$, three different situations will occur as shown in 
+figure~\ref{fig_band_bending}:
+\begin{itemize}
+\item $U = U_{fb}$: flat band situation no matter the semiconductor type
+\item $U > U_{fb}$: depletion (accumulation) in a case of n-type (p-type) semiconductor  
+\item $U < U_{fb}$: accumulation (depletion) in a case of n-type (p-type) semiconductor
+\end{itemize}
+
+Without illumination, cathodic (anodic) currents are favored in a case of 
+accumulation of electrons (holes) for an n-type (p-type) semiconductor. 
+In fact, the majority charge carriers of n-type (p-type) semiconductors are 
+electrons (holes). 
+Reciprocally, anodic (cathodic) currents are not favored in a case of 
+depletion of electrons (holes) for an n-type (p-type) semiconductor. 
+The junction between a semiconductor and an electrolyte acts like a Schottky diode.
+
+\input{figures/fig_band_bending}
+\clearpage
 
 
 \subsection{Semiconductor/electrolyte interface under illumination}
+The illumination of the semiconductor/electrolyte interface, 
+with photons having an energy greater than the band gap, $E_g$, creates 
+electron/hole pairs in the semiconductor. 
+By applying the adequate potential the pairs can be separated. 
+As a consequence, the majority charge carriers are attracted to the 
+semiconductor bulk whereas the minority charge carriers are drawn to the 
+semiconductor/electrolyte interface where they can be transferred to a RedOx 
+species creating an additional current called photocurrent.  
+Figure~\ref{fig_photocurrent_generation} illustrates schematically the 
+mechanism leading to the creation of a photocurrent. n-type (p-type) 
+semiconductors generate anodic (cathodic) photocurrents where the 
+electrons (holes) move towards the external circuit whereas the holes (electrons) 
+move towards the interface. 
+The photocurrent is significant when the semiconductor/electrolyte junction 
+is in depletion. 
+Therefore, the applied potential on n-type (p-type) semiconductors is 
+greater (lower) than the flat band potential.
+Figure~\ref{fig_photocurrent_plieth} shows the anodic (cathodic) photocurrent 
+for a GaAs n-type (p-type) semiconductor.
+
+\input{figures/fig_photocurrent_generation}
+
+\input{figures/fig_photocurrent_plieth}
