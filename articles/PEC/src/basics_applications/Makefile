@@ -26,8 +26,8 @@ index:
 	$(NCL) ./$(BUILD_FOLDER)/$(FNAME).nlo -s nomencl.ist -o ./$(BUILD_FOLDER)/$(FNAME).nls
 
 copy: 
-	cp -rf $(BUILD_FOLDER)/$(FNAME).pdf ../../$(OUTNAME).pdf
+	cp -rf $(BUILD_FOLDER)/$(FNAME).pdf $(BIN_FOLDER)/$(OUTNAME).pdf
 
 clean:
-	rm -rf build/*
-	rm -rf ../../$(OUTNAME).pdf
+	rm -rf $(BUILD_FOLDER)/*
+	rm -rf $(BIN_FOLDER)/*
