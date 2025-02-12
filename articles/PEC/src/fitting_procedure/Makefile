@@ -1,22 +1,30 @@
 FNAME=main
 OUTNAME=pec_fitting_procedure
 TEX=pdflatex
-BIB=biber
+BIB=bibtex
 VIEWER=sumatrapdf 
 NCL=makeindex
 BUILD_FOLDER=build
 SRC_FOLDER=src
 BIN_FOLDER=bin
 
-.PHONY: all tex biber index link copy clean
+.ONESHELL:
 
-all: tex biber link copy
+.PHONY: all tex biber bibtex index link copy clean
+
+all: tex bibtex link copy
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 ./src/$(FNAME).tex
 	
 biber:
 	$(BIB) ./$(BUILD_FOLDER)/$(FNAME).bcf --output-file ./$(BUILD_FOLDER)/$(FNAME).bbl
+
+bibtex:
+	cp $(SRC_FOLDER)/references.bib $(BUILD_FOLDER)/
+	cd $(BUILD_FOLDER)
+	$(BIB) $(FNAME).aux 
+	cd ..
 
 link:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 ./src/$(FNAME).tex
