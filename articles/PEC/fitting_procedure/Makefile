@@ -1,7 +1,7 @@
 FNAME=main
 OUTNAME=pec_fitting_procedure
 TEX=pdflatex
-BIB=bibtex
+BIB=biber
 VIEWER=sumatrapdf 
 NCL=makeindex
 BUILD_FOLDER=build
@@ -12,7 +12,7 @@ BIN_FOLDER=bin
 
 .PHONY: all tex biber bibtex index link copy clean
 
-all: tex bibtex link copy
+all: tex biber link copy
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 ./src/$(FNAME).tex
