@@ -8,9 +8,13 @@ BUILD_FOLDER=build
 SRC_FOLDER=src
 BIN_FOLDER=bin
 
-.PHONY: all tex biber index link copy clean
+.PHONY: all dirs tex biber index link copy clean
 
-all: tex biber link copy
+all: dirs tex biber link copy
+
+dirs:
+	mkdir -p build 
+	mkdir -p bin
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 ./src/$(FNAME).tex
