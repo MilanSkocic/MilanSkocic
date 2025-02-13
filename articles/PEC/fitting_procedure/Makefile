@@ -10,9 +10,13 @@ BIN_FOLDER=bin
 
 .ONESHELL:
 
-.PHONY: all tex biber bibtex index link copy clean
+.PHONY: all dirs tex biber bibtex index link copy clean
 
-all: tex biber link copy
+all: dirs tex biber link copy
+
+dirs:
+	mkdir -p build
+	mkdir -p bin
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 ./src/$(FNAME).tex
