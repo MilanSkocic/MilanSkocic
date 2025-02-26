@@ -20,14 +20,14 @@ en: $(SRC_FOLDER)/$(filename)_en.tex
 
 fr: $(SRC_FOLDER)/$(filename)_fr.tex
 	$(TEX) --output-directory=$(BUILD_FOLDER) --synctex=1 $^ 
-	$(BIB) $(BUILD_FOLDER)/$(filename)_en.bcf --output-file $(BUILD_FOLDER)/$(filename)_en.bbl 
+	$(BIB) $(BUILD_FOLDER)/$(filename)_fr.bcf --output-file $(BUILD_FOLDER)/$(filename)_fr.bbl 
 	$(TEX) --output-directory=$(BUILD_FOLDER) --synctex=1 $^ 
 	$(TEX) --output-directory=$(BUILD_FOLDER) --synctex=1 $^ 
 	cp -f $(BUILD_FOLDER)/$(filename)_fr.pdf $(BIN_FOLDER)/$(out)-fr.pdf
 
 sr: $(SRC_FOLDER)/$(filename)_sr.tex
 	$(TEX) --output-directory=$(BUILD_FOLDER) --synctex=1 $^ 
-	$(BIB) $(BUILD_FOLDER)/$(filename)_en.bcf --output-file $(BUILD_FOLDER)/$(filename)_en.bbl 
+	$(BIB) $(BUILD_FOLDER)/$(filename)_sr.bcf --output-file $(BUILD_FOLDER)/$(filename)_sr.bbl 
 	$(TEX) --output-directory=$(BUILD_FOLDER) --synctex=1 $^ 
 	$(TEX) --output-directory=$(BUILD_FOLDER) --synctex=1 $^ 
 	cp -f $(BUILD_FOLDER)/$(filename)_sr.pdf $(BIN_FOLDER)/$(out)-sr.pdf
