@@ -7,7 +7,13 @@
 \usepackage{graphicx} %insert images
 \usepackage{caption}
 \usepackage{subcaption}
-\graphicspath{{./}}
+\graphicspath{{./}, {./src/figures/}}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{decorations.pathmorphing,arrows,calc}
 
 \usepackage[backend=biber,
 bibstyle=ieee, 
@@ -79,5 +85,19 @@ backref=false,]
 \newcommand{\ReIphCalc}{Re \, I_{ph,calc}}
 \newcommand{\ImIphExp}{Im \, I_{ph,exp}}
 \newcommand{\ImIphCalc}{Im \, I_{ph,calc}}
+
+\newcommand{\modi}[1]{\vert #1 \vert}
+\newcommand{\sigmae}{\sigma _{exp}}
+\newcommand{\sigmap}{\sigma _{p}}
+\newcommand{\iphe}{I_{ph,exp}}
+\newcommand{\iphc}{I_{ph,calc}}
+\newcommand{\gradX}{\nabla \chi ^2}
+\newcommand{\je}{J _{\epsilon}}
+%\newcommand{\hv}{h  \nu}
+\newcommand{\tvp}{t_{dof,P}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\epsp}{\epsilon ^{\prime}}
+\newcommand{\jep}{J _{\epsp}}
+\newcommand{\coef}{0.1}
 
 \newcommand{\hv}{h\nu}
