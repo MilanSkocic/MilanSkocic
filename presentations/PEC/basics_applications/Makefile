@@ -6,15 +6,15 @@ VIEWER=sumatrapdf
 NCL=makeindex
 BUILD_FOLDER=build
 SRC_FOLDER=src
-BIN_FOLDER=bin
+BIN_FOLDER=pdf
 
 .PHONY: all dirs tex biber index link copy clean
 
 all: dirs tex biber link copy
 
 dirs:
-	mkdir -p build 
-	mkdir -p bin
+	mkdir -p $(BUILD_FOLDER)
+	mkdir -p $(BIN_FOLDER)
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 ./src/$(FNAME).tex
