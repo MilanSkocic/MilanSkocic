@@ -6,7 +6,7 @@ VIEWER=sumatrapdf
 NCL=makeindex
 BUILD_FOLDER=build
 SRC_FOLDER=src
-BIN_FOLDER=bin
+BIN_FOLDER=pdf
 
 .ONESHELL:
 
@@ -15,8 +15,8 @@ BIN_FOLDER=bin
 all: dirs tex biber index link copy
 
 dirs:
-	mkdir -p build
-	mkdir -p bin
+	mkdir -p $(BUILD_FOLDER)
+	mkdir -p $(BIN_FOLDER)
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 $(SRC_FOLDER)/$(FNAME).tex
