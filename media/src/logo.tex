@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{fontspec}
+\setmainfont{CMU Concrete}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{graphicx}
+
+\definecolor{Fortran}{HTML}{734F96}
+
+\begin{document}
+    \scalebox{2.0}{
+        \begin{circuitikz}
+        \filldraw[color=Fortran, opacity=0.2] (0,0) circle (1cm);
+
+        \node[anchor=center]  at (-0.5, 0.0) {\color{black}E};
+        \node[anchor=center]  at (0.5, 0.0) {\color{black}C};
+
+            \node[anchor=center]  at (0.0, 0.0) {\color{black}\fontsize{60pt}{60pt}\selectfont \symbol{"03C7}};
+
+        \node[anchor=center]  at (0.1, 0.5) {\color{black}$\small\alpha$};
+        \node[anchor=center]  at (-0.1, -0.5) {\color{black}$\small\omega$};
+        \end{circuitikz}
+    }
+\end{document}
