@@ -27,7 +27,8 @@ $(BUILD_FOLDER)/%.pdf: $(SRC_FOLDER)/%.tex
 	cp $@ $(BIN_FOLDER)
 
 $(PNG_FOLDER)/%.png: $(BUILD_FOLDER)/%.pdf
-	$(CONVERT) -density $(CONVERT_DENSITY) $<  $@
+	$(CONVERT) -units pixelsperinch -density $(CONVERT_DENSITY) -quality 100 $<  $@
+	$(CONVERT) $@ -resize 50% $@
 
 $(ICO_FOLDER)/%.ico: $(PNG_FOLDER)/%.png
 	$(CONVERT) -background transparent $< -define icon:auto-resize=64 $@
