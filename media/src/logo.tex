@@ -1,29 +1,13 @@
-\documentclass{standalone}
-\usepackage{fontspec}
-\usepackage{unicode-math}
-\setmainfont{QTBrushStroke}
-%\setsansfont{CMU Sans Serif}
-%\setmonofont{CMU Typewriter Text}
-\usepackage{tikz}
-\usepackage{circuitikz}
-\usepackage{graphicx}
+\scalebox{5}{
+    \begin{circuitikz}
+    \filldraw[top color=T, bottom color=B, middle color=M, draw=black, fill opacity=\fpc] (0,0) circle (1cm);
 
-\definecolor{Fortran}{HTML}{734F96}
+    \node[anchor=center]  at (-0.6, 0.0) {\color{E} \fontsize{\lts}{\lts}\selectfont E};
+    \node[anchor=center]  at (0.6, 0.0) {\color{C} \fontsize{\lts}{\lts}\selectfont C};
 
-\newcommand{\lts}{20pt}
+    \node[anchor=center]  at (0.0, 0.0) {\color{X}\fontsize{\chisize}{\chisize}\selectfont $\chi$};
 
-\begin{document}
-    \scalebox{5}{
-        \begin{circuitikz}
-        \filldraw[color=white, draw=black, fill opacity=0.2] (0,0) circle (1cm);
-
-        \node[anchor=center]  at (-0.6, 0.0) {\fontsize{\lts}{\lts}\selectfont E};
-        \node[anchor=center]  at (0.6, 0.0) {\fontsize{\lts}{\lts}\selectfont C};
-
-            \node[anchor=center]  at (0.0, 0.0) {\color{black}\fontsize{60pt}{60pt}\selectfont $\chi$};
-
-        \node[anchor=center]  at (0.1, 0.5) {\color{black}$\alpha$};
-        \node[anchor=center]  at (-0.1, -0.5) {\color{black}$\omega$};
-        \end{circuitikz}
-    }
-\end{document}
+    \node[anchor=center]  at (0.1, 0.5) {\color{A}$\alpha$};
+    \node[anchor=center]  at (-0.1, -0.5) {\color{O}$\omega$};
+    \end{circuitikz}
+}
