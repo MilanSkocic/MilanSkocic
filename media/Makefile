@@ -11,7 +11,7 @@ CONVERT=magick
 CONVERT_DENSITY=300
 CONVERT_RESIZE=200x200
 
-TEX_SRC=$(SRC_FOLDER)/color.tex $(SRC_FOLDER)/bw.tex $(SRC_FOLDER)/bwr.tex
+TEX_SRC=$(SRC_FOLDER)/logo_color.tex $(SRC_FOLDER)/logo_bw.tex $(SRC_FOLDER)/logo_bwr.tex $(SRC_FOLDER)/name_bw.tex $(SRC_FOLDER)/name_bwr.tex $(SRC_FOLDER)/full_bw.tex $(SRC_FOLDER)/full_bwr.tex
 OUTPUTS=$(patsubst $(SRC_FOLDER)/%.tex, $(PNG_FOLDER)/%.png, $(TEX_SRC)) $(patsubst $(SRC_FOLDER)/%.tex, $(ICO_FOLDER)/%.ico, $(TEX_SRC))
 
 all: dirs $(OUTPUTS) 
