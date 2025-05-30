@@ -36,6 +36,7 @@ link:
 
 index: 
 	$(NCL) ./$(BUILD_FOLDER)/$(FNAME).nlo -s nomencl.ist -o ./$(BUILD_FOLDER)/$(FNAME).nls
+	$(NCL) ./$(BUILD_FOLDER)/$(FNAME).idx
 
 copy: 
 	cp -rf $(BUILD_FOLDER)/$(FNAME).pdf $(BIN_FOLDER)/$(OUTNAME).pdf
