@@ -1,0 +1,30 @@
+\begin{titlepage}
+    \centering
+    
+    \begin{tikzpicture}[scale=1.0]
+        \newcommand{\xlen}{13}
+        \newcommand{\ylen}{10}
+        \newcommand{\esize}{0.2}
+        \newcommand{\ediam}{0.4}
+
+        \draw[thick, arrows=->] (-3, 0) -- (\xlen,0); % x axis
+        \draw[thick, arrows=->] (0, -3) -- (0,\ylen); % y axis
+
+        \foreach \i [evaluate=\i as \y using \i+\esize] in {0,\ediam,...,\ylen}
+        {
+            \draw[thin] (-\esize, \y) circle (\esize);
+        }
+
+    \end{tikzpicture}
+    \vspace{1cm}
+    
+    {\Huge \textsc{Electrochemistry}\par}
+    \hrulefill \par
+    {\large Milan Skocic, PhD.}
+    
+
+    \vfill
+    \includegraphics[width=0.65\textwidth]{full_bw.png}
+
+
+\end{titlepage}
