@@ -2,18 +2,53 @@
     \centering
     
     \begin{tikzpicture}[scale=1.0]
+        \newcommand{\xoff}{-3}
+        \newcommand{\yoff}{-3}
         \newcommand{\xlen}{13}
-        \newcommand{\ylen}{10}
-        \newcommand{\esize}{0.2}
-        \newcommand{\ediam}{0.4}
+        \newcommand{\ylen}{11}
+        \newcommand{\ylene}{10}
 
-        \draw[thick, arrows=->] (-3, 0) -- (\xlen,0); % x axis
-        \draw[thick, arrows=->] (0, -3) -- (0,\ylen); % y axis
+        \newcommand{\esize}{0.2} % radius: electron
+        \newcommand{\ediam}{0.4} % diameter: electron
+        \newcommand{\psize}{0.3} % radius: positive charges on metal
+        \newcommand{\pdiam}{0.6} % diameter: positivie charges on metal
 
-        \foreach \i [evaluate=\i as \y using \i+\esize] in {0,\ediam,...,\ylen}
+        \newcommand{\xihp}{\pdiam} % x position: Inner Helmoltz Potential
+        \newcommand{\xohp}{3}      % x position: Outer Helmoltz Potential
+
+        \newcommand{\asize}{0.5} %radius: anions solvated
+        \newcommand{\adiam}{1.0} %diameter: anions solvated
+
+        \draw[thick, arrows=->] (\xoff, 0) -- (\xlen,0) node[below, anchor=north, yshift=-0.2cm] {\Large \bf Distance x}; % x axis
+        \draw[thick, arrows=->] (0, \yoff) -- (0,\ylen) node[left, anchor=east, rotate=90, yshift=+1cm] {\color{red}\Large \bf Potential $\Phi$}; % y axis
+
+        % Metal htach
+        \draw[draw=none,pattern={Lines[angle=45,distance={0.5cm},xshift=.1pt]}] (\xoff, 0) rectangle (0,\ylen);
+        
+        % negative charges in metal
+        \foreach \i [evaluate=\i as \y using \i+\esize] in {0,\ediam,...,\ylene}
         {
-            \draw[thin] (-\esize, \y) circle (\esize);
+            \filldraw[fill=white] (-\esize, \y) circle (\esize) node {-};
         }
+        
+        % positives charges in electrolyte
+        \foreach \i [evaluate=\i as \y using \i+\psize] in {0,\pdiam,...,\ylene}
+        {
+            \draw[thin] (+\psize, \y) circle (\psize) node {+};
+        }
+
+        % IHP/OHP
+        \draw[dashed] (\xihp, -1) -- (\xihp, \ylen+1) node [at start, yshift=-0.2cm] {IHP};
+        \draw[dashed] (\xohp, -1) -- (\xohp, \ylen+1) node [at start, yshift=-0.2cm] {OHP};
+
+        % solvated anions
+        \draw (5,5) circle (\asize) node {-};
+        \foreach \a in {0,60,...,360}
+        {
+            \draw ($(5,5)+(\a:\asize+\psize)$) circle (\psize) node {+};
+        }
+
+        
 
     \end{tikzpicture}
     \vspace{1cm}
