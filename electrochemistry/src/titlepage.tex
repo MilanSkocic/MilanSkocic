@@ -1,7 +1,7 @@
 \begin{titlepage}
     \centering
     
-    \begin{tikzpicture}[scale=1.0]
+    \begin{tikzpicture}[scale=1.0, thick]
         \newcommand{\xoff}{-3}
         \newcommand{\yoff}{-3}
         \newcommand{\xlen}{13}
@@ -19,6 +19,7 @@
         \newcommand{\asize}{0.5} %radius: anions solvated
         \newcommand{\adiam}{1.0} %diameter: anions solvated
 
+
         \draw[thick, arrows=->] (\xoff, 0) -- (\xlen,0) node[below, anchor=north, yshift=-0.2cm] {\Large \bf Distance x}; % x axis
         \draw[thick, arrows=->] (0, \yoff) -- (0,\ylen) node[left, anchor=east, rotate=90, yshift=+1cm] {\color{red}\Large \bf Potential $\Phi$}; % y axis
 
@@ -34,7 +35,7 @@
         % positives charges in electrolyte
         \foreach \i [evaluate=\i as \y using \i+\psize] in {0,\pdiam,...,\ylene}
         {
-            \draw[thin] (+\psize, \y) circle (\psize) node {+};
+            \draw (+\psize, \y) circle (\psize) node {+};
         }
 
         % IHP/OHP
@@ -43,12 +44,21 @@
 
         % solvated anions
         \draw (5,5) circle (\asize) node {-};
-        \foreach \a in {0,60,...,360}
+        \foreach \a in {0,45,...,360}
         {
             \draw ($(5,5)+(\a:\asize+\psize)$) circle (\psize) node {+};
         }
-
+        \foreach \a in {0,22.5,...,360}
+        {
+            \draw ($(5,5)+(\a:\asize+\pdiam+\esize)$) circle (\esize) node {-};
+        }
         
+        
+        \foreach \x/\y in {1/1, 2/2, 3/4, 2/7, 2.5/9, 2/10}
+        {
+            \draw (\x, \y) circle (\psize) node {+};
+            \draw (\x+\psize+\esize,\y) circle (\esize) node {-};
+        }
 
     \end{tikzpicture}
     \vspace{1cm}
