@@ -32,6 +32,7 @@ vim.cmd([[set termguicolors]])
 vim.cmd([[set cc=80]])
 vim.cmd([[set foldmethod=indent]])
 vim.cmd([[set nowrap]])
+vim.cmd([[set spell spelllang=en_us]])
 
 local cmp = require'cmp'
 
