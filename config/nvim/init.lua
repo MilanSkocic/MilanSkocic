@@ -24,7 +24,10 @@ require("lazy").setup({
     {import = "plugins"}
 })
 
-vim.cmd([[colorscheme NeoSolarized]])
+--vim.cmd([[colorscheme NeoSolarized]])
+--vim.cmd([[let g:neosolarized_contrast = "high"]])
+--vim.cmd([[let g:neosolarized_visibility = "normal"]])
+vim.cmd([[colorscheme catppuccin-mocha]])
 vim.cmd([[let g:neosolarized_contrast = "high"]])
 vim.cmd([[let g:neosolarized_visibility = "normal"]])
 vim.cmd([[set termguicolors]])
