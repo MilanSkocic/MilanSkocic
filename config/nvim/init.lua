@@ -28,9 +28,10 @@ require("lazy").setup({
 --vim.cmd([[let g:neosolarized_contrast = "high"]])
 --vim.cmd([[let g:neosolarized_visibility = "normal"]])
 vim.cmd([[colorscheme catppuccin-mocha]])
-vim.cmd([[let g:neosolarized_contrast = "high"]])
-vim.cmd([[let g:neosolarized_visibility = "normal"]])
 vim.cmd([[set termguicolors]])
+vim.cmd([[set cc=80]])
+vim.cmd([[set foldmethod=indent]])
+vim.cmd([[set nowrap]])
 
 local cmp = require'cmp'
 
