@@ -7,6 +7,9 @@ SHORTDESCRIPTION="Short description"
 HOMEPAGE="Home Page"
 LICENSE="MIT"
 MANSECTION="1"
+RED="\e[31m"
+BLACK="\e[0m"
+GREEN="\e[32m"
 
 # MENU FUNCTIONS
 help () {
@@ -23,15 +26,16 @@ help () {
     echo ""
     
     echo "SUBCOMMANDS"
-    echo "  + build    Compile code."
+    echo -e $RED"+ build    Compile code."$BLACK
     echo ""
     
     echo "SUBCOMMANDS_OPTIONS"
-    echo " -d, --directory PATH    Set the working directory"
+    echo -e $GREEN" -d, --directory PATH    Set the working directory"$BLACK
     echo ""
 
     echo "EXAMPLES"
     echo "  $PROGNAME SUBCOMMAND COMMAND"
+    echo ""
     
     echo "SEE ALSO"
     echo "  + The home page is ..."
