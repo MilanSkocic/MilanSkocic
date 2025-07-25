@@ -128,3 +128,19 @@ function y() {
 }
 
 export PATH="$PATH:$HOME/.local/bin"
+
+prog="batcat"
+if which $prog >/dev/null; then
+    echo "$prog was found. Aliasing cat -> $prog"
+    alias cat="$prog"
+else
+    echo "$prog not found."
+fi
+
+prog="zoxide"
+if which $prog >/dev/null; then
+    echo "$prog was found. Aliasing cd -> $prog"
+    alias cd="z"
+else
+    echo "$prog not found."
+fi
