@@ -144,3 +144,5 @@ if which $prog >/dev/null; then
 else
     echo "$prog not found."
 fi
+
+echo "bashrc loaded"
