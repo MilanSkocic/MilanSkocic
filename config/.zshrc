@@ -116,7 +116,9 @@ export ARCHFLAGS="-arch $(uname -m)"
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(zoxide init zsh)"
-eval "$(oh-my-posh init zsh --config /home/milan/.cache/oh-my-posh/themes/kushal.omp.json)"
+eval "$(oh-my-posh init zsh --config /home/mskocic/.cache/oh-my-posh/themes/kushal.omp.json)"
 #eval "$(oh-my-posh init zsh --config /home/milan/.cache/oh-my-posh/themes/montys.omp.json)"
 #eval "$(oh-my-posh init zsh --config /home/milan/.cache/oh-my-posh/themes/night-owl.omp.json)"
 #eval "$(oh-my-posh init zsh --config /home/milan/.cache/oh-my-posh/themes/night-owl.omp.json)"
+
+source <(fzf --zsh)
