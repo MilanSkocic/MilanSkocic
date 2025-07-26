@@ -8,7 +8,7 @@ for s in $SOURCES; do
 done
 
 
-SOURCES="yazi kitty neomutt"
+SOURCES="yazi kitty neomutt matplotlib"
 for s in $SOURCES; do
     if [ -d $HOME/.config/$s/ ]; then
         cp -rfv $HOME/.config/$s/ $TARGET/
