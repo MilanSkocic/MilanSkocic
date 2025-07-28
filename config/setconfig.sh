@@ -68,6 +68,18 @@ backup () {
 
 }
 
+set () {
+
+    for i in $GITREPO/.*; do
+        cp -rfv $i $HOME/
+    done
+
+    for i in $GITREPO/*; do
+        cp -rfv $i $HOME/.config/
+    done
+
+}
+
 
 case $1 in 
     "--help"|"-h")
@@ -80,6 +92,10 @@ case $1 in
         ;;
     "backup")
         backup
+        exit 0
+        ;;
+    "set")
+        set 
         exit 0
         ;;
     *)
