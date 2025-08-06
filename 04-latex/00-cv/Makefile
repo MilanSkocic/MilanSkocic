@@ -3,7 +3,7 @@ all: en fr sr
 
 en: 
 	mkdir -p build
-	mkdir -p bin
+	mkdir -p pdf
 	make -C src en
 
 fr:
@@ -18,4 +18,4 @@ sr:
 
 clean:
 	rm -rf ./build/
-	rm -rf ./bin/
+	rm -rf ./pdf/

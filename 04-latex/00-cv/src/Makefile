@@ -5,7 +5,7 @@ BIB=biber
 VIEWER=evince 
 NCL=makeindex
 BUILD_FOLDER=../build
-BIN_FOLDER=../bin
+BIN_FOLDER=../pdf
 SRC_FOLDER=./
 
 all: en fr sr
