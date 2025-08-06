@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-url=../media/png/
+url=../../../01-media/logo/png/
 target=full_bw.png
 cp -v $url/$target ./src/figures/
 
-cp -fv ../bibtex/electrochemistry.bib ./src/references.bib
+cp -fv ../../../03-bibtex/electrochemistry.bib ./src/references.bib
 
