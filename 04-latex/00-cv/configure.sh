@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-FPATH="../bibtex/publications.bib"
+FPATH="../../03-bibtex/publications.bib"
 
 
 cp -fv $FPATH ./src/
