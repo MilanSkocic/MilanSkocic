@@ -1,0 +1,93 @@
+\documentclass[10pt,compress]{beamer}
+\usepackage[english]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\graphicspath{{./src/figures/}}
+
+%\usepackage{fancyhdr} %custom headers and footers layout
+\usepackage{lastpage} %package to print the last page
+%\pagestyle{fancy} %fancy page style
+
+\usepackage{textcomp} 
+\usepackage{multicol} 
+\usepackage{multirow}
+
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+
+\usepackage[backend=biber,
+bibstyle=ieee, 
+citestyle=numeric-comp,
+natbib=true,
+doi=false, 
+url=false,
+isbn=false,
+mincitenames=1,
+maxcitenames=1,
+minbibnames=1,
+maxbibnames=99,
+backref=false,]
+{biblatex}
+\addbibresource[label=main]{./src/references.bib}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+%edit the properties of your PDF documents which will be displayed
+\hypersetup{
+    bookmarks=true, 		% show bookmarks bar?
+    unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,      % page fit to window when opened
+    pdftitle={},    % title
+    pdfauthor={M. Skocic},     % author
+    pdfsubject={},   % subject of the document
+    pdfnewwindow=true,      % links in new window
+    pdfkeywords={}, % list of keywords
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{decorations.pathmorphing,arrows,calc}
+
+\title{Multiple Python interpreters on Linux}
+\author{M. Skocic}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Required packages}
+
+    sudo apt-get install build-essential checkinstall
+
+    sudo apt-get install libreadline-dev libncursesw5-dev libssl-dev 
+
+    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev
+
+    zlib1g-dev liblzma-dev libgdbm-compact-dev libnsl-dev
+
+\end{frame}
+
+
+\end{document}
