@@ -72,7 +72,7 @@ backref=false,]
 \usepackage{circuitikz}
 \usetikzlibrary{decorations.pathmorphing,arrows,calc}
 
-\title{PhotoElectroChemistry in Corrosion}
+\title{PhotoElectroChemistry for Corrosion}
 \author{M. Skocic, PhD Electrochemistry and Materials}
 \date{\vfill \includegraphics[width=0.70\textwidth]{full_bw.png}}
 
@@ -90,80 +90,149 @@ backref=false,]
 
 
 \section{Introduction}
-\begin{frame}{Introduction}
-    \begin{itemize}
-        \item Photoelectrochemical techniques have been shown to be useful tools for characterizing oxidation layers. 
-        \item Interdisciplinary theoretical underpinnings were built \citep{morrison1980, vijh1969, stimming1986, diquarto1997, wouters2007} 
-              such as the Gärtner-Butler model \citep{gaertner1959,butler1977}
-              which has been proven to be a simple and robust model for the photocurrent generation. 
-        \item Technical progresses were achieved, allowing to study oxide layers at 
-              macroscopic, mesoscopic, and microscopic scales 
-              \citep{benaboud2007, srisrual2011}, or in-situ in high temperature corrosion 
-              conditions \citep{bojinov2002,skocic2016}.
-    \end{itemize}
-\end{frame}
+    \begin{frame}{Introduction}
+        \begin{itemize}
+            \item Photoelectrochemical techniques have been shown to be useful tools for characterizing oxidation layers. 
+            \item Interdisciplinary theoretical underpinnings were built \citep{morrison1980, vijh1969, stimming1986, diquarto1997, wouters2007} 
+                  such as the Gärtner-Butler model \citep{gartner1959,butler1977}
+                  which has been proven to be a simple and robust model for the photocurrent generation. 
+            \item Technical progresses were achieved, allowing to study oxide layers at 
+                  macroscopic, mesoscopic, and microscopic scales 
+                  \citep{benaboud2007, srisrual2011}, or in-situ in high temperature corrosion 
+                  conditions \citep{bojinov2002,skocic2016}.
+        \end{itemize}
+    \end{frame}
 
+    \begin{frame}{Hypotheses}
+        Several hypotheses are needed in order to apply the theoretical concepts:  
+        \begin{itemize}
+            \item semiconductors are considered to be ideal i.e. crystallized and homogeneous  
+            \item the dielectric constant of the semiconductor is independent of the light wavelength  
+            \item the capacity of the Helmholtz layer is greater than the capacitance of the space charge capacitance  
+            \item the potential drop in the Helmholtz layer is independent of the applied potential and is negligible
+        \end{itemize}
 
-\begin{frame}{Hypotheses}
-    Several hypotheses are needed in order to apply the theoretical concepts:  
-    \begin{itemize}
-        \item semiconductor are considered to be ideal i.e. crystallized and homogeneous  
-        \item the dielectric constant of the semiconductor is independent of the light wavelength  
-        \item the capacity of the Helmholtz layer is greater than the capacitance of the space charge capacitance  
-        \item the potential drop in the Helmholtz layer is independent of the applied potential and is negligible
-    \end{itemize}
-
-    \footnotesize
-    \begin{alertblock}{Warning}
-        The hypotheses are rarely fully respected in the case of oxides or passive 
-        films formed on industrial alloys. Nonetheless, the literature shows that the 
-        developed models can be applied to non-ideal systems such as oxides 
-        and passive films.
-    \end{alertblock}
-\end{frame}
-
-
-
-
-
-\section{Electronic Band Structure}
-\begin{frame}[allowframebreaks=1.0]{Band Model}
-    \begin{itemize}
-        \item Solids: conductors, semiconductors and insulators. 
-        \item Valence and conduction bands correspond to allowed energy states for the electrons. 
-        \item $E_c$ is the lowest energy level of the conduction band.
-        \item $E_v$ is the highest energy level of the valence band.
-        \item $E_g$ is the band gap with no allowed energy states. 
-        \item $E_F$ is the Fermi Level which describes the distribution of the electrons among both bands.
-    \end{itemize}
-    
-    \begin{alertblock}{Fermi Level}
         \footnotesize
-        The Fermi Level represents the highest energy state that can be occupied level at 0K. 
-        It is equivalent to the electrochemical potential in solid phases.
-    \end{alertblock}
-    \input{./src/figures/tikz_band_model.tex}
-\end{frame}
-
-\begin{frame}{Excitation carrier}
-    \input{./src/figures/tikz_excitation_carrier}
-\end{frame}
-
-\begin{frame}{Fermi Position}
-    \input{./src/figures/tikz_fermi_position}
-\end{frame}
+        \begin{alertblock}{Warning}
+            The hypotheses are rarely fully respected in the case of oxides or passive 
+            films formed on industrial alloys. Nonetheless, the literature shows that the 
+            developed models can be applied to non-ideal systems such as oxides 
+            and passive films.
+        \end{alertblock}
+    \end{frame}
 
 
+
+
+\section{basics}
+\subsection{Electronic Band Structure}
+    \begin{frame}[allowframebreaks=1.0]{Band Model}
+        \begin{itemize}
+            \item Solids: conductors, semiconductors and insulators. 
+            \item Valence and conduction bands correspond to allowed energy states for the electrons. 
+            \item $E_c$ is the lowest energy level of the conduction band.
+            \item $E_v$ is the highest energy level of the valence band.
+            \item $E_g$ is the band gap with no allowed energy states. 
+            \item $E_F$ is the Fermi Level which describes the distribution of the electrons among both bands.
+        \end{itemize}
+        
+        \begin{alertblock}{Fermi Level}
+            \footnotesize
+            The Fermi Level represents the highest energy state that can be occupied level at 0K. 
+            It is equivalent to the electrochemical potential in solid phases.
+        \end{alertblock}
+        
+        \framebreak
+        \begin{itemize}
+            \item The electronic conduction = movement of electrons and/or holes in conduction/valence band.
+            \item The conduction depends on the number of available charge carriers
+            in the conduction band and in the valence band. 
+            \item In conductors: overlap of the conduction and the valence bands occurs. 
+            \item In semiconductor and insulator: the conduction depends on the band gap and the energy provided by 
+            the environment to the electrons from the valence band in order to jump 
+            into the conduction band.
+        \end{itemize}
+
+        \input{./src/figures/tikz_band_model.tex}
+    \end{frame}
+
+    \begin{frame}[allowframebreaks=1.0]{Excitation carrier}
+        In semiconductors, charge carriers can be generated by three mechanisms: 
+        \begin{itemize}
+            \item thermal excitation: in the case of very low band gaps, thermal excitation can be enough in order 
+            to eject an electron from the valence band to the conduction band.
+            \item photoexcitation: ejects electrons from the valence band to the conduction 
+            band when an incident photon, with energy greater than the band gap, is absorbed.
+            \item doping: introduces additional energy level located in between the conduction and 
+            valence bands.
+        \end{itemize}
+        
+        \input{./src/figures/tikz_excitation_carrier}
+
+    \end{frame}
+
+    \begin{frame}{Fermi Position}
+        \input{./src/figures/tikz_fermi_position}
+        The Fermi level $E_F$ in intrinsic semiconductors is located at the mid-gap. 
+        The n-type and p-type doping shift the Fermi level towards band edges 
+        $E_c$ and $E_v$.
+    \end{frame}
+
+\subsection{Semiconductor/electrolyte interface in dark condition}
+
+\subsection{Semiconductor/electrolyte interface under illumination}
 
 
 \section{Applications}
+\subsection{Minor oxides}
+\begin{frame}[allowframebreaks=1.0]{Identification of minor oxides}
+    
+    \begin{itemize}
+        \item \citet{benaboud2007} showed that the photoelectrochemical characterization 
+        is robust for detecting the presence of minor oxides. 
+        \item Alloying elements Fe, Sn and Cr, present in Zircaloy4, form precipitates 
+        which can be oxidized into minor oxides during the oxidation process.
+        \item The strong photocurrent observed at around 5~eV 
+              reveals the major oxide i.e. monoclinic zirconia. 
+        \item The photocurrent at energy lower than 5 eV is not null and reveals the 
+              presence of minor oxides even in “pure” zirconium despite the very low 
+              concentration of impurities. 
+        \item The slope changes provided an estimation of the band gaps where the author 
+              identified the presence of hematite, chromia and a solid solution of 
+              $(Fe_xCr_{1-x})O_3$. 
+    \end{itemize}
+
+    \newcommand{\coef}{0.45}
+    \begin{figure}[h]
+        \centering
+        \begin{subfigure}{\coef\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{./src/figures/Benaboud2007-Fig4.png}
+            \caption{}
+            \label{fig_benaboud_minor_oxides_a}
+        \end{subfigure}
+        \begin{subfigure}{\coef\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{./src/figures/Benaboud2007-Fig5.png}
+            \caption{}
+            \label{fig_benaboud_minor_oxides_b}
+        \end{subfigure}
+        
+        \caption{Photocurrent spectra measured on zirconia oxide layer formed on 
+        Zircaloy4 and “pure” zirconium oxidized for 1h at 470°C in oxygenated 
+        atmosphere\citep{benaboud2007}: a) complete spectrum b) close-up view on the minor contributions.}
+        \label{fig_benaboud_minor_oxides}
+    \end{figure}
+
+
+\end{frame}
+
+\subsection{Semiconduction type}
 \begin{frame}{Identification of minor oxides}
 
 \end{frame}
 
-\begin{frame}{Identification of minor oxides}
-
-\end{frame}
+\subsection{High temperature PEC}
 
 
 
