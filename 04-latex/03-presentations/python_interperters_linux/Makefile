@@ -1,5 +1,5 @@
 FNAME=main
-OUTNAME=card0
+OUTNAME=compile_python_linux
 TEX=pdflatex
 BIB=biber
 VIEWER=sumatrapdf 

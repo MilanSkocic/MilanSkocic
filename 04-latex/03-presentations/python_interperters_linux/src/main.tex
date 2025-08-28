@@ -1,74 +1,75 @@
 \documentclass[10pt,compress]{beamer}
-\usepackage[english]{babel}
+    \useoutertheme{miniframes}
+    \usepackage[english]{babel}
 
-\usepackage{amsmath}
-\usepackage{amsfonts} 
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amsfonts} 
+    \usepackage{amssymb}
+    \usepackage{amsthm}
+    \usepackage{mathtools}
 
-\usepackage[utf8]{inputenc}
+    \usepackage[utf8]{inputenc}
 
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{caption}
+    \usepackage{subcaption}
 
-\graphicspath{{./src/figures/}}
+    \graphicspath{{./src/figures/}}
 
-%\usepackage{fancyhdr} %custom headers and footers layout
-\usepackage{lastpage} %package to print the last page
-%\pagestyle{fancy} %fancy page style
+    %\usepackage{fancyhdr} %custom headers and footers layout
+    \usepackage{lastpage} %package to print the last page
+    %\pagestyle{fancy} %fancy page style
 
-\usepackage{textcomp} 
-\usepackage{multicol} 
-\usepackage{multirow}
+    \usepackage{textcomp} 
+    \usepackage{multicol} 
+    \usepackage{multirow}
 
-\usepackage[table]{xcolor}
-\usepackage{booktabs}
+    \usepackage[table]{xcolor}
+    \usepackage{booktabs}
 
-\usepackage[backend=biber,
-bibstyle=ieee, 
-citestyle=numeric-comp,
-natbib=true,
-doi=false, 
-url=false,
-isbn=false,
-mincitenames=1,
-maxcitenames=1,
-minbibnames=1,
-maxbibnames=99,
-backref=false,]
-{biblatex}
-\addbibresource[label=main]{./src/references.bib}
+    \usepackage[backend=biber,
+    bibstyle=ieee, 
+    citestyle=numeric-comp,
+    natbib=true,
+    doi=false, 
+    url=false,
+    isbn=false,
+    mincitenames=1,
+    maxcitenames=1,
+    minbibnames=1,
+    maxbibnames=99,
+    backref=false,]
+    {biblatex}
+    \addbibresource[label=main]{./src/references.bib}
 
-\usepackage{url}
-\usepackage{hyperref}
+    \usepackage{url}
+    \usepackage{hyperref}
 
-\usetheme{metropolis}
+    %\usetheme{metropolis}
 
-%edit the properties of your PDF documents which will be displayed
-\hypersetup{
-    bookmarks=true, 		% show bookmarks bar?
-    unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=true,      % page fit to window when opened
-    pdftitle={},    % title
-    pdfauthor={M. Skocic},     % author
-    pdfsubject={},   % subject of the document
-    pdfnewwindow=true,      % links in new window
-    pdfkeywords={}, % list of keywords
-    colorlinks=false,       % false: boxed links; true: colored links
-    linkcolor=red,          % color of internal links
-    citecolor=green,        % color of links to bibliography
-    filecolor=magenta,      % color of file links
-    urlcolor=cyan           % color of external links
-}
+    %edit the properties of your PDF documents which will be displayed
+    \hypersetup{
+        bookmarks=true, 		% show bookmarks bar?
+        unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
+        pdftoolbar=true,        % show Acrobat’s toolbar?
+        pdfmenubar=true,        % show Acrobat’s menu?
+        pdffitwindow=true,      % page fit to window when opened
+        pdftitle={},    % title
+        pdfauthor={M. Skocic},     % author
+        pdfsubject={},   % subject of the document
+        pdfnewwindow=true,      % links in new window
+        pdfkeywords={}, % list of keywords
+        colorlinks=false,       % false: boxed links; true: colored links
+        linkcolor=red,          % color of internal links
+        citecolor=green,        % color of links to bibliography
+        filecolor=magenta,      % color of file links
+        urlcolor=cyan           % color of external links
+    }
 
-\usepackage{tikz}
-\usepackage{circuitikz}
-\usetikzlibrary{decorations.pathmorphing,arrows,calc}
+    \usepackage{tikz}
+    \usepackage{circuitikz}
+    \usetikzlibrary{decorations.pathmorphing,arrows,calc}
 
 \title{Multiple Python interpreters on Linux}
 \author{M. Skocic}
@@ -80,6 +81,7 @@ backref=false,]
     \titlepage
 \end{frame}
 
+\section{Dependencies}
 \begin{frame}{Required packages}
     
     \begin{alertblock}{Debian-based distributions}
@@ -100,8 +102,9 @@ backref=false,]
 \end{frame}
 
 
+\section{Build}
 \begin{frame}{Compilation}
-    \alert{Example with Python 3.13}
+    \begin{alertblock}{Example with Python 3.13}
         \begin{semiverbatim}
             {\small
 
@@ -118,9 +121,21 @@ backref=false,]
             \$ sudo make altinstall
             }
         \end{semiverbatim}
+    \end{alertblock}
+    
+    \begin{alertblock}{Free threaded with Python 3.14}
+        Python 3.14 allows to disable the GIL.
+        \begin{semiverbatim}
+            {\small
+
+            \$ sudo ./configure --enable-optimizations --disable-gil
+
+            }
+        \end{semiverbatim}
+    \end{alertblock}
 \end{frame}
 
-
+\section{Installation}
 \begin{frame}{Alternatives}
     \begin{alertblock}{Update}
         \begin{semiverbatim}
