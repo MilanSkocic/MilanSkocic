@@ -8,7 +8,7 @@ HOMEPAGE="Home Page"
 LICENSE="MIT"
 MANSECTION="1"
 
-GITREPO="$HOME/Documents/MilanSkocic/config"
+GITREPO="$HOME/Documents/MilanSkocic/3-Resource/config"
 DOTFILES=".bashrc .zshrc .tmux.conf"
 
 # MENU FUNCTIONS
@@ -53,13 +53,11 @@ version () {
 
 
 backup () {
-
     for s in $DOTFILES; do
         cp -rfv $HOME/$s $GITREPO/
     done
 
-
-    DOTFILES="yazi kitty neomutt matplotlib wezterm"
+    DOTFILES="nvim yazi kitty neomutt matplotlib wezterm"
     for s in $DOTFILES; do
         if [ -d $HOME/.config/$s/ ]; then
             cp -rfv $HOME/.config/$s/ $GITREPO/
@@ -69,7 +67,6 @@ backup () {
 }
 
 set () {
-
     for i in $GITREPO/.*; do
         cp -rfv $i $HOME/
     done
@@ -77,7 +74,6 @@ set () {
     for i in $GITREPO/*; do
         cp -rfv $i $HOME/.config/
     done
-
 }
 
 

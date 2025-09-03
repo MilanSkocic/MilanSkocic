@@ -9,7 +9,7 @@ config.color_scheme = 'Catppuccin Mocha'
 
 
 -- font
-config.font_size = 14
+config.font_size = 16
 -- config.dpi=110
 config.font = wezterm.font("UbuntuMono Nerd Font Mono")
 config.adjust_window_size_when_changing_font_size = false

@@ -112,9 +112,6 @@ export ARCHFLAGS="-arch $(uname -m)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config /home/mskocic/.cache/oh-my-posh/themes/kushal.omp.json)"
 #eval "$(oh-my-posh init zsh --config /home/milan/.cache/oh-my-posh/themes/montys.omp.json)"
