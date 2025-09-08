@@ -7,7 +7,7 @@ C_SOURCES=$(wildcard *.c)
 F_SOURCES=$(wildcard *.f90)
 C_OBJECTS=$(patsubst %.c, %.o, $(C_SOURCES))
 F_OBJECTS=$(patsubst %.f90, %.o, $(F_SOURCES))
-EXE=app
+EXE=app.out
 
 all: $(EXE)
 
@@ -21,5 +21,5 @@ $(F_OBJECTS): $(F_SOURCES)
 	$(FC) -c $(FFLAGS) $^ -o $@
 
 clean:
-	rm -f *.o
+arm -f *.o
 	rm -f app*
