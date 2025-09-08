@@ -1,8 +1,8 @@
 CC=gcc
 FC=gfortran
-CFLAGS=-std=c11
-FFLAGS=-std=f2018
-LDFLAGS=-lncurses
+CFLAGS=-std=c11 -O3
+FFLAGS=-std=f2018 -O3 -I$(HOME)/.local/include
+LDFLAGS=-lncurses -lstdlib
 C_SOURCES=$(wildcard *.c)
 F_SOURCES=$(wildcard *.f90)
 C_OBJECTS=$(patsubst %.c, %.o, $(C_SOURCES))
@@ -21,5 +21,5 @@ $(F_OBJECTS): $(F_SOURCES)
 	$(FC) -c $(FFLAGS) $^ -o $@
 
 clean:
-arm -f *.o
+	rm -f *.o
 	rm -f app*
