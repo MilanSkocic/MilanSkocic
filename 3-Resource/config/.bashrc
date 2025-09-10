@@ -130,6 +130,11 @@ function y() {
 }
 
 export PATH="$PATH:$HOME/.local/bin"
+export C_INCLUDE_PATH="$C_INCLUDE_PATH:$HOME/.local/include"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.local/lib"
+export LIBRARY_PATH="$LD_LIBRARY_PATH"
+
+
 
 prog="batcat"
 if which $prog >/dev/null; then

@@ -57,7 +57,7 @@ backup () {
         cp -rfv $HOME/$s $GITREPO/
     done
 
-    DOTFILES="nvim yazi kitty neomutt matplotlib wezterm"
+    DOTFILES="nvim yazi kitty ghostty neomutt matplotlib wezterm"
     for s in $DOTFILES; do
         if [ -d $HOME/.config/$s/ ]; then
             cp -rfv $HOME/.config/$s/ $GITREPO/
