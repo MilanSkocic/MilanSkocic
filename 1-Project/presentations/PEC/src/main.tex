@@ -1,96 +1,96 @@
 \documentclass[10pt,compress]{beamer}
-\useoutertheme{miniframes}
-\usepackage[english]{babel}
-%\usepackage[margin=1in]{geometry}
+    \useoutertheme{miniframes}
+    \usepackage[english]{babel}
+    %\usepackage[margin=1in]{geometry}
 
-\usepackage{amsmath}
-\usepackage{amsfonts} 
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amsfonts} 
+    \usepackage{amssymb}
+    \usepackage{amsthm}
+    \usepackage{mathtools}
 
-\usepackage[utf8]{inputenc}
-%\usepackage[exscale, amsfonts, amssymb]{concmath}
-%\renewcommand*{\bfseries}{\mdseries}
+    \usepackage[utf8]{inputenc}
+    %\usepackage[exscale, amsfonts, amssymb]{concmath}
+    %\renewcommand*{\bfseries}{\mdseries}
 
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{caption}
+    \usepackage{subcaption}
 
-\graphicspath{{./src/figures/}}
+    \graphicspath{{./src/figures/}}
 
-%\usepackage{fancyhdr} %custom headers and footers layout
-\usepackage{lastpage} %package to print the last page
-%\pagestyle{fancy} %fancy page style
+    %\usepackage{fancyhdr} %custom headers and footers layout
+    \usepackage{lastpage} %package to print the last page
+    %\pagestyle{fancy} %fancy page style
 
-\usepackage{textcomp} 
-\usepackage{multicol} 
-\usepackage{multirow}
+    \usepackage{textcomp} 
+    \usepackage{multicol} 
+    \usepackage{multirow}
 
-\usepackage[table]{xcolor}
-\usepackage{booktabs}
+    \usepackage[table]{xcolor}
+    \usepackage{booktabs}
 
-\usepackage[backend=biber,
-bibstyle=ieee, 
-citestyle=numeric-comp,
-natbib=true,
-doi=false, 
-url=false,
-isbn=false,
-mincitenames=1,
-maxcitenames=1,
-minbibnames=1,
-maxbibnames=99,
-backref=false,]
-{biblatex}
-\addbibresource[label=main]{./src/references.bib}
+    \usepackage[backend=biber,
+    bibstyle=ieee, 
+    citestyle=numeric-comp,
+    natbib=true,
+    doi=false, 
+    url=false,
+    isbn=false,
+    mincitenames=1,
+    maxcitenames=1,
+    minbibnames=1,
+    maxbibnames=99,
+    backref=false,]
+    {biblatex}
+    \addbibresource[label=main]{./src/references.bib}
 
-\usepackage{url}
-\usepackage{hyperref}
+    \usepackage{url}
+    \usepackage{hyperref}
 
-%edit the properties of your PDF documents which will be displayed
-\hypersetup{
-    bookmarks=true, 		% show bookmarks bar?
-    unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
-    pdftoolbar=true,        % show Acrobat’s toolbar?
-    pdfmenubar=true,        % show Acrobat’s menu?
-    pdffitwindow=true,      % page fit to window when opened
-    pdftitle={PhotoElectrochemistry --- Theoretical Background},    % title
-    pdfauthor={M. Skocic},     % author
-    pdfsubject={},   % subject of the document
-    pdfnewwindow=true,      % links in new window
-    pdfkeywords={}, % list of keywords
-    colorlinks=false,       % false: boxed links; true: colored links
-    linkcolor=red,          % color of internal links
-    citecolor=green,        % color of links to bibliography
-    filecolor=magenta,      % color of file links
-    urlcolor=cyan           % color of external links
-}
+    %edit the properties of your PDF documents which will be displayed
+    \hypersetup{
+        bookmarks=true, 		% show bookmarks bar?
+        unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
+        pdftoolbar=true,        % show Acrobat’s toolbar?
+        pdfmenubar=true,        % show Acrobat’s menu?
+        pdffitwindow=true,      % page fit to window when opened
+        pdftitle={PhotoElectrochemistry --- Theoretical Background},    % title
+        pdfauthor={M. Skocic},     % author
+        pdfsubject={},   % subject of the document
+        pdfnewwindow=true,      % links in new window
+        pdfkeywords={}, % list of keywords
+        colorlinks=false,       % false: boxed links; true: colored links
+        linkcolor=red,          % color of internal links
+        citecolor=green,        % color of links to bibliography
+        filecolor=magenta,      % color of file links
+        urlcolor=cyan           % color of external links
+    }
 
-\usepackage{tikz}
-\usepackage{circuitikz}
-\usetikzlibrary{decorations.pathmorphing,arrows,calc}
+    \usepackage{tikz}
+    \usepackage{circuitikz}
+    \usetikzlibrary{decorations.pathmorphing,arrows,calc}
 
-\title{PhotoElectroChemistry for Corrosion}
-\author{M. Skocic, PhD Electrochemistry and Materials}
-\date{\vfill \includegraphics[width=0.70\textwidth]{full_bw.png}}
+    \title{PhotoElectroChemistry for Corrosion}
+    \author{M. Skocic, PhD Electrochemistry and Materials}
+    \date{\vfill \includegraphics[width=0.70\textwidth]{full_bw.png}}
 
-\newcommand{\coef}{1}
+    \newcommand{\coef}{1}
 
 \begin{document}
 
-\begin{frame}
-    \titlepage
-\end{frame}
+    \begin{frame}
+        \titlepage
+    \end{frame}
 
-\begin{frame}
-    \frametitle{Contents}
-    \tableofcontents
-\end{frame}
+    \begin{frame}
+        \frametitle{Contents}
+        \tableofcontents
+    \end{frame}
 
 
-
+% INTRODUCTION
 \section{Introduction}
     \begin{frame}{Introduction}
         \begin{itemize}
@@ -124,8 +124,7 @@ backref=false,]
     \end{frame}
 
 
-
-
+% BASICS
 \section{basics}
 \subsection{Electronic Band Structure}
     \begin{frame}[allowframebreaks=1.0]{Band Model}
@@ -179,13 +178,51 @@ backref=false,]
         $E_c$ and $E_v$.
     \end{frame}
 
-
 \subsection{Semiconductor/electrolyte interface in dark condition}
 
-
 \subsection{Semiconductor/electrolyte interface under illumination}
+    \begin{frame}[allowframebreaks=1.0]{Electron/hole pairs}
+    \begin{itemize} 
+        \item The illumination of the semiconductor/electrolyte interface, 
+        with photons having an energy greater than the band gap, $E_g$, creates 
+        electron/hole pairs in the semiconductor. 
+        \item By applying the adequate potential the pairs can be separated. 
+        \item As a consequence, the majority charge carriers are attracted to the 
+        semiconductor bulk whereas the minority charge carriers are drawn to the 
+        semiconductor/electrolyte interface where they can be transferred to a RedOx 
+        species creating an additional current called photocurrent.  
+    \end{itemize}
+    
+    Figure~\ref{fig_photocurrent_generation} illustrates schematically the 
+    mechanism leading to the creation of a photocurrent. n-type (p-type) 
+    semiconductors generate anodic (cathodic) photocurrents where the 
+    electrons (holes) move towards the external circuit whereas the holes (electrons) 
+    move towards the interface. 
+    The photocurrent is significant when the semiconductor/electrolyte junction 
+    is in depletion. 
+    Figure~\ref{fig_photocurrent_plieth} shows the anodic (cathodic) photocurrent 
+    for a GaAs n-type (p-type) semiconductor.
+
+    Therefore, the applied potential on n-type (p-type) semiconductors is 
+    greater (lower) than the flat band potential. \index{potential!flat band}
+
+    % \input{./src/figures/fig_photocurrent_generation}
+
+    % \input{./src/figures/fig_photocurrent_plieth}
+
+    \end{frame}
 
 
+    \begin{frame}[allowframebreaks=1.0]{Semiconductor/electrolyte interface under illumination}
+        \begin{itemize}
+            \item The linear transform with respect to the energy is used for determining the band gaps. 
+            \item The linear transform with respect to the potential  is used for determining 
+                  the semiconducting type, the flat band potential, 
+                  and the number of majority charge carrier.
+        \end{itemize}
+    \end{frame}
+
+% APPLICATIONS 
 \section{Applications}
 \subsection{Minor oxides}
     \begin{frame}[allowframebreaks=1.0]{Identification of minor oxides}
@@ -227,7 +264,7 @@ backref=false,]
         \end{figure}
     \end{frame}
 
-\subsection{Semiconduction type}
+\subsection{Semiconducting type}
     \begin{frame}[allowframebreaks=1.0]{Semiconduction type}
         \begin{itemize}
             \item \citet{loucif2013} showed the effect of hydrogen pressure on 
