@@ -79,7 +79,6 @@
     \newcommand{\coef}{1}
 
 \begin{document}
-
     \begin{frame}
         \titlepage
     \end{frame}
@@ -154,7 +153,13 @@
             into the conduction band.
         \end{itemize}
 
-        \input{./src/figures/tikz_band_model.tex}
+        \begin{figure}[h]
+            \centering
+                \includegraphics[width=0.65\textwidth]{tikz_band_model.png}
+            \caption{Schematic representation of the electronic band structure \citep{marucco2006}: 
+            a) conductor, b) semiconductor, c) insulator}
+            \label{fig_band_model}
+        \end{figure}
     \end{frame}
 
     \begin{frame}[allowframebreaks=1.0]{Excitation carrier}
@@ -168,11 +173,23 @@
             valence bands.
         \end{itemize}
         
-        \input{./src/figures/tikz_excitation_carrier}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.65\textwidth]{tikz_excitation_carrier.png}
+            \caption{Schematic representation of the mechanisms generating charge carriers in semiconductors \citep{finklea1983}: 
+            a) thermal excitation, b) photoexcitation, c) doping}
+            \label{fig_excitation_carrier}
+        \end{figure}
     \end{frame}
 
     \begin{frame}{Fermi Position}
-        \input{./src/figures/tikz_fermi_position}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.65\textwidth]{tikz_fermi_position.png}
+            \caption{Schematic representation of the Fermi level with respect to the 
+            semiconduction type \citep{finklea1983}: a) intrinsic, b) n-type, c) p-type.}
+            \label{fig_fermi_position}
+        \end{figure}
         The Fermi level $E_F$ in intrinsic semiconductors is located at the mid-gap. 
         The n-type and p-type doping shift the Fermi level towards band edges 
         $E_c$ and $E_v$.
@@ -190,30 +207,41 @@
         \item As a consequence, the majority charge carriers are attracted to the 
         semiconductor bulk whereas the minority charge carriers are drawn to the 
         semiconductor/electrolyte interface where they can be transferred to a RedOx 
-        species creating an additional current called photocurrent.  
+        species creating an additional current called photocurrent. 
     \end{itemize}
     
-    Figure~\ref{fig_photocurrent_generation} illustrates schematically the 
-    mechanism leading to the creation of a photocurrent. n-type (p-type) 
-    semiconductors generate anodic (cathodic) photocurrents where the 
-    electrons (holes) move towards the external circuit whereas the holes (electrons) 
-    move towards the interface. 
-    The photocurrent is significant when the semiconductor/electrolyte junction 
-    is in depletion. 
-    Figure~\ref{fig_photocurrent_plieth} shows the anodic (cathodic) photocurrent 
-    for a GaAs n-type (p-type) semiconductor.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.65\textwidth]{tikz_photocurrent_generation.png}
+        \caption{Schematic representation of the mechanism generating 
+        a photocurrent \citep{memming2008,bard2002}.}
+        \label{fig_photocurrent_generation}
+    \end{figure}
+    
+    \begin{itemize}
+        \item The photocurrent is significant when the semiconductor/electrolyte junction 
+        is in depletion. 
+        \item n-type (p-type) 
+        semiconductors generate anodic (cathodic) photocurrents where the 
+        electrons (holes) move towards the external circuit whereas the holes (electrons) 
+        move towards the interface. 
+        \item The applied potential on n-type (p-type) semiconductors is 
+        greater (lower) than the flat band potential. \index{potential!flat band}
+    \end{itemize}
 
-    Therefore, the applied potential on n-type (p-type) semiconductors is 
-    greater (lower) than the flat band potential. \index{potential!flat band}
-
-    % \input{./src/figures/fig_photocurrent_generation}
-
-    % \input{./src/figures/fig_photocurrent_plieth}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.65\textwidth]{tikz_photocurrent_plieth.png}
+        \caption{Photocurrent density $i_{ph}$ and dark current density 
+        $i_d$ with respect to the potential in a case of GaAs semiconductor 
+        \citep{plieth2008}: a) n-type, b) p-type.}
+        \label{fig_photocurrent_plieth}
+    \end{figure}
 
     \end{frame}
 
 
-    \begin{frame}[allowframebreaks=1.0]{Semiconductor/electrolyte interface under illumination}
+    \begin{frame}[allowframebreaks=1.0]{Linear transform}
         \begin{itemize}
             \item The linear transform with respect to the energy is used for determining the band gaps. 
             \item The linear transform with respect to the potential  is used for determining 
