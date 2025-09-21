@@ -41,7 +41,13 @@
     can be occupied level at 0K. 
     It is equivalent to the electrochemical potential\index{potential!electrochemical} in solid phases.
 
-    \input{./src/figures/fig_band_model.tex}
+    \begin{figure}[h]
+        \centering
+            \includegraphics[width=0.85\textwidth]{tikz_band_model.png}
+        \caption{Schematic representation of the electronic band structure \citep{marucco2006}: 
+        a) conductor, b) semiconductor, c) insulator}
+        \label{fig_band_model}
+    \end{figure}
 
     The electronic conduction\index{conduction!electronic} is due to the movement either of the negatively 
     charged electrons in the conduction band or of the positively charged holes 
@@ -77,7 +83,13 @@
     The latter trap electrons from the valence band and therefore create holes. 
     Consequently, the majority charge carriers are positively charged holes.
 
-    \input{./src/figures/fig_excitation_carrier}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.85\textwidth]{tikz_excitation_carrier.png}
+        \caption{Schematic representation of the mechanisms generating charge carriers in semiconductors \citep{finklea1983}: 
+        a) thermal excitation, b) photoexcitation, c) doping}
+        \label{fig_excitation_carrier}
+    \end{figure}
 
     The Fermi level $E_F$ in intrinsic semiconductors is located at the mid-gap \index{Fermi!mid-gap}. 
     The n-type and p-type doping\index{doping!n-type}\index{doping!p-type} shift the Fermi level towards band edges 
@@ -85,7 +97,13 @@
     The figure~\ref{fig_fermi_position} shows the position of the Fermi level 
     with respect to the semiconductor type. \index{Fermi!position}
 
-    \input{./src/figures/fig_fermi_position}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.85\textwidth]{tikz_fermi_position.png}
+        \caption{Schematic representation of the Fermi level with respect to the 
+        semiconduction type \citep{finklea1983}: a) intrinsic, b) n-type, c) p-type.}
+        \label{fig_fermi_position}
+    \end{figure}
 
 
 
@@ -105,8 +123,27 @@
     The spatial extension of the depletion/accumulation zone is called space 
     charge as shown in figure~\ref{fig_space_charge_depletion}. \index{space charge}
 
-    \input{./src/figures/fig_interface_potential.tex}
-    \input{./src/figures/fig_space_charge_depletion}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.85\textwidth]{tikz_interface_potential.png}
+        \caption{Potential gradient at semiconductor/electrolyte interface 
+        \citep{marcus2006}. $\Phi_{sc}$ and $\Phi_{el}$ correspond to the 
+        potentials of the semiconductor and the electrolyte, respectively. 
+        $\Delta Phi _{sc/el}$ corresponds to the potential difference between 
+        the semiconductor and the electrolyte. $w_{sc}$ and $w_{H}$ correspond to 
+        the widths of the space charge and the electrical double layer, 
+        respectively.}
+        \label{fig_interface_potential}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.85\textwidth]{tikz_space_charge_depletion.png}
+        \caption{Schematic representation of the space charge in depletion of majority charge carriers for 
+        a semiconductor in contact with an electrolyte \citep{memming2008,bard2002}:
+         a) n-type, b) p-type.}
+        \label{fig_space_charge_depletion}
+    \end{figure}
 
     Depletion and accumulation as well as band bending can be obtained 
     by polarizing the semiconductor. \index{accumulation}\index{depletion}
@@ -132,7 +169,14 @@
     The junction between a semiconductor and an electrolyte acts like a Schottky diode.
     \index{junction}\index{Schottky}
 
-    \input{./src/figures/fig_band_bending}
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=0.85\textwidth]{tikz_band_bending.png}
+        \caption{Schematic representation of the band bending in p-type and n-type 
+        semiconductors in contact with an electrolyte \citep{memming2008, bard2002}:
+         a) $U = U_{fb}$, b) $U > U_{fb}$, c) $U < U_{fb}$.}
+        \label{fig_band_bending}
+    \end{figure}
     \clearpage
 
 
@@ -159,9 +203,22 @@
     Therefore, the applied potential on n-type (p-type) semiconductors is 
     greater (lower) than the flat band potential. \index{potential!flat band}
 
-    \input{./src/figures/fig_photocurrent_generation}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.85\textwidth]{tikz_photocurrent_generation.png}
+        \caption{Schematic representation of the mechanism generating 
+        a photocurrent \citep{memming2008,bard2002}.}
+        \label{fig_photocurrent_generation}
+    \end{figure}
 
-    \input{./src/figures/fig_photocurrent_plieth}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.85\textwidth]{tikz_photocurrent_plieth.png}
+        \caption{Photocurrent density $i_{ph}$ and dark current density 
+        $i_d$ with respect to the potential in a case of GaAs semiconductor 
+        \citep{plieth2008}: a) n-type, b) p-type.}
+        \label{fig_photocurrent_plieth}
+    \end{figure}
 
     \citet{gartner1959} and \citet{butler1977} \index{Gärtner-Butler!model} 
     proposed a simple and robust model for 

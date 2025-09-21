@@ -2,8 +2,13 @@
 
 url=../../../3-Resource/logo/png
 target=full_bw.png
+cp -fv $url/$target ./src/figures/
 
-cp -v $url/$target ./src/figures/
+url=../../../3-Resource/figures/png
+target=*.png
+cp -fv $url/$target ./src/figures/
 
-cp -fv ../../../3-Resource/references/electrochemistry.bib ./src/references.bib
+url=../../../3-Resource/references/
+target=electrochemistry.bib
+cp -fv $url/$target ./src/references.bib
 
