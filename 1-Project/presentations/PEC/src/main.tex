@@ -182,7 +182,7 @@
         \end{figure}
     \end{frame}
 
-    \begin{frame}{Fermi Position}
+    \begin{frame}{Fermi Level Position}
         The Fermi level $E_F$ in intrinsic semiconductors is located at the mid-gap. 
         The n-type and p-type doping shift the Fermi level towards band edges 
         $E_c$ and $E_v$.
@@ -241,13 +241,95 @@
     \end{frame}
 
 
-    \begin{frame}[allowframebreaks=1.0]{Linear transform}
-        \begin{itemize}
-            \item The linear transform with respect to the energy is used for determining the band gaps. 
-            \item The linear transform with respect to the potential  is used for determining 
-                  the semiconducting type, the flat band potential, 
-                  and the number of majority charge carrier.
+    \begin{frame}[allowframebreaks=1.0]{Gärtner-Butler Model}
+        \begin{itemize} 
+        \item \citet{gartner1959} and \citet{butler1977} proposed a simple and robust model for 
+              describing the photocurrent (no recombination of the photogenerated electron/hole pairs in the space charge).
+        \item The photocurrent depends on  
+            \begin{itemize}
+                \item $w_{sc}$: space charge width 
+                \item $\alpha$: absorption coefficient
+                \item $L_{cc }$: the average diffusion length of the minority charge carriers
+            \end{itemize}
         \end{itemize}
+
+        \begin{equation}
+            I_{ph} = \phi _0 \left[ 1 - \frac{\exp (-\alpha _{sc} \cdot w_{sc})}{1+\alpha _{sc} \cdot
+            L_{cc}} \right]
+            \label{eq_iph_gartner_butler}
+        \end{equation}
+        
+        When $\alpha _{sc} \cdot w_{sc} \ll 1$ and $\alpha _{\sc} \cdot L_{cc} \ll 1$, 
+        the photocurrent is approximated by the 
+        equation~\ref{eq_iph_gartner_butler_simplified}.
+
+        \begin{equation}
+            I_{ph} = \phi _0 \cdot \alpha _{\sc} \cdot w_{sc}
+            \label{eq_iph_gartner_butler_simplified}
+        \end{equation}
+        
+        \footnotesize
+        \begin{alertblock}{Warning}
+            All absorbed photons generate electron/hole pairs and 
+            the minority charge carriers are transferred to the electrolyte and 
+            therefore contribute to the photocurrent.
+        \end{alertblock}
+
+        \framebreak
+        Space charge width $w_{sc}$ in depletion depends on:
+        \begin{itemize}
+            \item $N_{cc}$: number of majority charge carriers ($\sim$ doping) 
+            \item $e$: elementary charge of an electron 
+            \item $U$: applied potentials
+            \item $U_{fb}$: flat band potential,
+            \item $\epsilon$: relative permittivity
+            \item $\epsilon _0$:vacuum permittivity
+        \end{itemize}
+
+        \begin{equation}
+            w_{sc} = \sqrt{ \frac{2\epsilon \epsilon _0}{e N_{cc}} (U-U_{fb}-\frac{kT}{e}) }
+            \label{eq_space_charge_Schottky}
+        \end{equation}
+        
+        The absorption coefficient $\alpha _{sc}$ depends on:
+        \begin{itemize}
+            \item $h\nu$: light energy $h\nu$
+            \item $n$: band-band transition type where $n$ takes discreet values of 0.5 or 2 when direct or indirect transitions are allowed.
+        \end{itemize}
+
+        \begin{equation}
+            \alpha _{sc} = const \frac{(h\nu - E_g)^n}{h\nu}
+            \label{eq_absorption_coef}
+        \end{equation}
+
+        \framebreak
+        The complete expression of the photocurrent is therefore given by the 
+        equation~\ref{eq_iph_substitute_W_alpha}. 
+        The latter is obtained by substituting the absorption coefficient $\alpha _{sc}$ 
+        and the space charge width $w_{sc}$ from the 
+        equation~\ref{eq_iph_gartner_butler_simplified}
+        by the equations~\ref{eq_space_charge_Schottky} and \ref{eq_absorption_coef}, 
+        respectively.
+
+        \begin{equation}
+            I_{ph} = \phi _0 \cdot const \frac{(h\nu - E_g)^n}{h\nu}
+                \cdot \sqrt{ \frac{2\epsilon \epsilon _0}{e N_{cc}} (U-U_{fb}-\frac{kT}{e}) }
+            \label{eq_iph_substitute_W_alpha}
+        \end{equation}
+        
+        The linear transform with respect to the energy is used for determining the band gaps. 
+        \begin{equation}
+            \left[ \frac{I_{ph} \cdot h\nu}{\phi _0} \right] ^{1/n} = const \cdot (h\nu - E_g)
+            \label{eq_iph_linear_transform}
+        \end{equation}
+        
+        The linear transform with respect to the potential  is used for determining 
+        the semiconducting type, the flat band potential, 
+        and the number of majority charge carrier.
+        \begin{equation}
+            I_{ph}^2 = const \cdot (U-U_{fb}-\frac{kT}{e})
+            \label{eq_iph_linear_transform_potential}
+        \end{equation}
     \end{frame}
 
 
