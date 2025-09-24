@@ -74,8 +74,9 @@
 
     \title{PhotoElectroChemistry for Corrosion}
     \author{M. Skocic, PhD Electrochemistry and Materials}
-    \date{\vfill \includegraphics[width=0.70\textwidth]{full_bw.png}}
+    \date{\vfill \includegraphics[width=0.70\textwidth]{full_bw.png}}   
 
+    \setlength{\parskip}{6pt}
     \newcommand{\coef}{1}
 
 \begin{document}
@@ -92,16 +93,16 @@
 % INTRODUCTION
 \section{Introduction}
     \begin{frame}{Introduction}
-        \begin{itemize}
-            \item Photoelectrochemical techniques have been shown to be useful tools for characterizing oxidation layers. 
-            \item Interdisciplinary theoretical underpinnings were built \citep{morrison1980, vijh1969, stimming1986, diquarto1997, wouters2007} 
-                  such as the Gärtner-Butler model \citep{gartner1959,butler1977}
-                  which has been proven to be a simple and robust model for the photocurrent generation. 
-            \item Technical progresses were achieved, allowing to study oxide layers at 
-                  macroscopic, mesoscopic, and microscopic scales 
-                  \citep{benaboud2007, srisrual2011}, or in-situ in high temperature corrosion 
-                  conditions \citep{bojinov2002,skocic2016}.
-        \end{itemize}
+        Photoelectrochemical techniques have been shown to be useful tools for characterizing oxidation layers. 
+        
+        Interdisciplinary theoretical underpinnings were built \citep{morrison1980, vijh1969, stimming1986, diquarto1997, wouters2007} 
+        such as the Gärtner-Butler model \citep{gartner1959,butler1977}
+        which has been proven to be a simple and robust model for the photocurrent generation. 
+        
+        Technical progresses were achieved, allowing to study oxide layers at 
+        macroscopic, mesoscopic, and microscopic scales 
+        \citep{benaboud2007, srisrual2011}, or in-situ in high temperature corrosion 
+        conditions \citep{bojinov2002,skocic2016}.
     \end{frame}
 
     \begin{frame}{Hypotheses}
@@ -128,42 +129,42 @@
 \section{basics}
 \subsection{Electronic Band Structure}
     \begin{frame}[allowframebreaks=1.0]{Band Model}
-        \begin{itemize}
-            \item Solids: conductors, semiconductors and insulators. 
-            \item Valence and conduction bands correspond to allowed energy states for the electrons. 
-            \item $E_c$ is the lowest energy level of the conduction band.
-            \item $E_v$ is the highest energy level of the valence band.
-            \item $E_g$ is the band gap with no allowed energy states. 
-            \item $E_F$ is the Fermi Level which describes the distribution of the electrons among both bands.
-        \end{itemize}
+        Solids: conductors, semiconductors and insulators. 
         
-        \begin{alertblock}{Fermi Level}
-            \footnotesize
-            The Fermi Level represents the highest energy state that can be occupied level at 0K. 
-            It is equivalent to the electrochemical potential in solid phases.
-        \end{alertblock}
+        Valence and conduction bands correspond to allowed energy states for the electrons. 
+        
+        $E_c$ is the lowest energy level of the conduction band.
+        
+        $E_v$ is the highest energy level of the valence band.
+        
+        $E_g$ is the band gap with no allowed energy states. 
+        
+        $E_F$ is the Fermi Level which describes the distribution of the electrons among both bands.
+        It represents the highest energy state that can be occupied level at 0K. 
+        It is equivalent to the electrochemical potential in solid phases.
         
         \framebreak
-        \begin{itemize}
-            \item The electronic conduction = movement of electrons and/or holes in conduction/valence band.
-            \item The conduction depends on the number of available charge carriers
-            in the conduction band and in the valence band. 
-            \item In conductors: overlap of the conduction and the valence bands occurs. 
-            \item In semiconductor and insulator: the conduction depends on the band gap and the energy provided by 
-            the environment to the electrons from the valence band in order to jump 
-            into the conduction band.
-        \end{itemize}
+        The electronic conduction = movement of electrons and/or holes in conduction/valence band.
+        
+        The conduction depends on the number of available charge carriers
+        in the conduction band and in the valence band. 
+        
+        In conductors: overlap of the conduction and the valence bands occurs. 
+        
+        In semiconductor and insulator: the conduction depends on the band gap and the energy provided by 
+        the environment to the electrons from the valence band in order to jump 
+        into the conduction band.
 
         \begin{figure}[h]
             \centering
-                \includegraphics[width=0.65\textwidth]{tikz_band_model.png}
+                \includegraphics[width=0.5\textwidth]{tikz_band_model.png}
             %\caption{Schematic representation of the electronic band structure \citep{marucco2006}: 
             %a) conductor, b) semiconductor, c) insulator}
             \label{fig_band_model}
         \end{figure}
     \end{frame}
 
-    \begin{frame}[allowframebreaks=1.0]{Excitation carrier}
+    \begin{frame}{Excitation carrier}
         In semiconductors, charge carriers can be generated by three mechanisms: 
         \begin{itemize}
             \item thermal excitation: in the case of very low band gaps, it can be enough in order 
@@ -175,7 +176,7 @@
         
         \begin{figure}[h]
             \centering
-            \includegraphics[width=0.6\textwidth]{tikz_excitation_carrier.png}
+            \includegraphics[width=0.5\textwidth]{tikz_excitation_carrier.png}
             %\caption{Schematic representation of the mechanisms generating charge carriers in semiconductors \citep{finklea1983}: 
             %a) thermal excitation, b) photoexcitation, c) doping}
             \label{fig_excitation_carrier}
@@ -184,11 +185,13 @@
 
     \begin{frame}{Fermi Level Position}
         The Fermi level $E_F$ in intrinsic semiconductors is located at the mid-gap. 
+        
         The n-type and p-type doping shift the Fermi level towards band edges 
         $E_c$ and $E_v$.
+        
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.65\textwidth]{tikz_fermi_position.png}
+            \includegraphics[width=0.5\textwidth]{tikz_fermi_position.png}
             %\caption{Schematic representation of the Fermi level with respect to the 
             %semiconduction type \citep{finklea1983}: a) intrinsic, b) n-type, c) p-type.}
             \label{fig_fermi_position}
@@ -196,62 +199,124 @@
     \end{frame}
 
 \subsection{Semiconductor/electrolyte interface in dark condition}
+    \begin{frame}[allowframebreaks=1.0]{Band Bending}
+            A potential gradient occurs when a semiconductor comes into contact with an 
+            electrolyte.
+            
+            $\Phi_{sc}$ and $\Phi_{el}$ correspond to the 
+            potentials of the semiconductor and the electrolyte, respectively. 
+            
+            $\Delta Phi _{sc/el}$ corresponds to the potential difference between 
+            the semiconductor and the electrolyte. 
+            
+            $w_{sc}$ and $w_{H}$ correspond to 
+            the widths of the space charge and the electrical double layer, 
+            respectively.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.5\textwidth]{tikz_interface_potential.png}
+            %\caption{Potential gradient at semiconductor/electrolyte interface 
+            %\citep{marcus2006}. $\Phi_{sc}$ and $\Phi_{el}$ correspond to the 
+            %potentials of the semiconductor and the electrolyte, respectively. 
+            %$\Delta Phi _{sc/el}$ corresponds to the potential difference between 
+            %the semiconductor and the electrolyte. $w_{sc}$ and $w_{H}$ correspond to 
+            %the widths of the space charge and the electrical double layer, 
+            %respectively.}
+            \label{fig_interface_potential}
+        \end{figure}
+
+        \framebreak
+            
+        The position of the Fermi level in the electrolyte with respect to the 
+        conduction and valence band edges leads to three different situations after 
+         a transient charge transfer:
+        \begin{itemize}
+            \item flat band
+            \item depletion
+            \item accumulation
+        \end{itemize}
+        
+        The flat band situation occurs when the Fermi level in the electrolyte 
+        matches the Fermi level in the semiconductor. 
+        
+        Consequently, there is no potential gradient in the semiconductor. 
+        
+        In a case of Fermi level mismatch, a band bending occurs in the semiconductor 
+        near the semiconductor/electrolyte interface.  
+        
+        \framebreak
+        The band bending leads to either depletion or accumulation of majority 
+        charge carriers near the semiconductor/electrolyte interface. 
+        
+        The spatial extension of the depletion/accumulation zone is called space 
+        charge.
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\textwidth]{tikz_space_charge_depletion.png}
+            %\caption{Schematic representation of the space charge in depletion of majority charge carriers for 
+            %a semiconductor in contact with an electrolyte \citep{memming2008,bard2002}:
+            % a) n-type, b) p-type.}
+            \label{fig_space_charge_depletion}
+        \end{figure}
+
+    \end{frame}
 
 \subsection{Semiconductor/electrolyte interface under illumination}
     \begin{frame}[allowframebreaks=1.0]{Electron/hole pairs}
-    \begin{itemize} 
-        \item The illumination of the semiconductor/electrolyte interface, 
+        The illumination of the semiconductor/electrolyte interface, 
         with photons having an energy greater than the band gap, $E_g$, creates 
         electron/hole pairs in the semiconductor. 
-        \item By applying the adequate potential the pairs can be separated. 
-        \item As a consequence, the majority charge carriers are attracted to the 
+        
+        By applying the adequate potential the pairs can be separated. 
+        
+        As a consequence, the majority charge carriers are attracted to the 
         semiconductor bulk whereas the minority charge carriers are drawn to the 
         semiconductor/electrolyte interface where they can be transferred to a RedOx 
         species creating an additional current called photocurrent. 
-    \end{itemize}
     
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.65\textwidth]{tikz_photocurrent_generation.png}
-        %\caption{Schematic representation of the mechanism generating 
-        %a photocurrent \citep{memming2008,bard2002}.}
-        \label{fig_photocurrent_generation}
-    \end{figure}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.65\textwidth]{tikz_photocurrent_generation.png}
+            %\caption{Schematic representation of the mechanism generating 
+            %a photocurrent \citep{memming2008,bard2002}.}
+            \label{fig_photocurrent_generation}
+        \end{figure}
     
-    \begin{itemize}
-        \item The photocurrent is significant when the semiconductor/electrolyte junction 
+        The photocurrent is significant when the semiconductor/electrolyte junction 
         is in depletion. 
-        \item n-type (p-type) 
+        
+        n-type (p-type) 
         semiconductors generate anodic (cathodic) photocurrents where the 
         electrons (holes) move towards the external circuit whereas the holes (electrons) 
         move towards the interface. 
-        \item The applied potential on n-type (p-type) semiconductors is 
+        
+        The applied potential on n-type (p-type) semiconductors is 
         greater (lower) than the flat band potential. \index{potential!flat band}
-    \end{itemize}
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.65\textwidth]{tikz_photocurrent_plieth.png}
-        %\caption{Photocurrent density $i_{ph}$ and dark current density 
-        %$i_d$ with respect to the potential in a case of GaAs semiconductor 
-        %\citep{plieth2008}: a) n-type, b) p-type.}
-        \label{fig_photocurrent_plieth}
-    \end{figure}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.65\textwidth]{tikz_photocurrent_plieth.png}
+            %\caption{Photocurrent density $i_{ph}$ and dark current density 
+            %$i_d$ with respect to the potential in a case of GaAs semiconductor 
+            %\citep{plieth2008}: a) n-type, b) p-type.}
+            \label{fig_photocurrent_plieth}
+        \end{figure}
 
     \end{frame}
 
 
     \begin{frame}[allowframebreaks=1.0]{Gärtner-Butler Model}
-        \begin{itemize} 
-        \item \citet{gartner1959} and \citet{butler1977} proposed a simple and robust model for 
-              describing the photocurrent (no recombination of the photogenerated electron/hole pairs in the space charge).
-        \item The photocurrent depends on  
+        \citet{gartner1959} and \citet{butler1977} proposed a simple and robust model for 
+        describing the photocurrent.
+        
+        The photocurrent depends on:  
             \begin{itemize}
                 \item $w_{sc}$: space charge width 
                 \item $\alpha$: absorption coefficient
                 \item $L_{cc }$: the average diffusion length of the minority charge carriers
             \end{itemize}
-        \end{itemize}
 
         \begin{equation}
             I_{ph} = \phi _0 \left[ 1 - \frac{\exp (-\alpha _{sc} \cdot w_{sc})}{1+\alpha _{sc} \cdot
@@ -268,22 +333,20 @@
             \label{eq_iph_gartner_butler_simplified}
         \end{equation}
         
-        \footnotesize
-        \begin{alertblock}{Warning}
-            All absorbed photons generate electron/hole pairs and 
-            the minority charge carriers are transferred to the electrolyte and 
-            therefore contribute to the photocurrent.
-        \end{alertblock}
+        %\footnotesize
+        %\begin{alertblock}{Warning}
+        %    All absorbed photons generate electron/hole pairs and 
+        %    the minority charge carriers are transferred to the electrolyte and 
+        %    therefore contribute to the photocurrent.
+        %\end{alertblock}
 
         \framebreak
         Space charge width $w_{sc}$ in depletion depends on:
         \begin{itemize}
             \item $N_{cc}$: number of majority charge carriers ($\sim$ doping) 
             \item $e$: elementary charge of an electron 
-            \item $U$: applied potentials
-            \item $U_{fb}$: flat band potential,
-            \item $\epsilon$: relative permittivity
-            \item $\epsilon _0$:vacuum permittivity
+            \item $U$, $U_{fb}$: applied, flat band potentials
+            \item $\epsilon$, $\epsilon _0$: relative, vacuum permittivity
         \end{itemize}
 
         \begin{equation}
@@ -291,11 +354,7 @@
             \label{eq_space_charge_Schottky}
         \end{equation}
         
-        The absorption coefficient $\alpha _{sc}$ depends on:
-        \begin{itemize}
-            \item $h\nu$: light energy $h\nu$
-            \item $n$: band-band transition type where $n$ takes discreet values of 0.5 or 2 when direct or indirect transitions are allowed.
-        \end{itemize}
+        The absorption coefficient $\alpha _{sc}$ depends on $h\nu$ (light energy) and $n$ (band-band transition type).
 
         \begin{equation}
             \alpha _{sc} = const \frac{(h\nu - E_g)^n}{h\nu}
@@ -303,13 +362,8 @@
         \end{equation}
 
         \framebreak
-        The complete expression of the photocurrent is therefore given by the 
+        The photocurrent is therefore given by the 
         equation~\ref{eq_iph_substitute_W_alpha}. 
-        The latter is obtained by substituting the absorption coefficient $\alpha _{sc}$ 
-        and the space charge width $w_{sc}$ from the 
-        equation~\ref{eq_iph_gartner_butler_simplified}
-        by the equations~\ref{eq_space_charge_Schottky} and \ref{eq_absorption_coef}, 
-        respectively.
 
         \begin{equation}
             I_{ph} = \phi _0 \cdot const \frac{(h\nu - E_g)^n}{h\nu}
@@ -337,17 +391,17 @@
 % APPLICATIONS 
 \section{Applications}
 \subsection{Minor oxides}
-    \begin{frame}[allowframebreaks=1.0]{Identification of minor oxides}
-        \begin{itemize}
-            \item \citet{benaboud2007} showed that the photoelectrochemical characterization 
-                  is robust for detecting the presence of minor oxides. 
-            \item The strong photocurrent observed at around 5~eV 
-                  reveals the major oxide i.e. monoclinic zirconia. 
-            \item The photocurrent $h\nu < 5 eV$ reveals the presence of minor 
-                  oxides even in “pure” zirconium. 
-            \item The slope changes provided an estimation of the band gaps: 
-                  hematite, chromia and a solid solution of $(Fe_xCr_{1-x})O_3$. 
-        \end{itemize}
+    \begin{frame}{Identification of minor oxides}
+        \citet{benaboud2007} showed that the photoelectrochemical characterization 
+        is robust for detecting the presence of minor oxides. 
+        
+        The strong photocurrent observed at around 5~eV 
+        reveals the major oxide i.e. monoclinic zirconia. 
+        The photocurrent $h\nu < 5 eV$ reveals the presence of minor 
+        oxides even in “pure” zirconium. 
+        
+        The slope changes provided an estimation of the band gaps: 
+        hematite, chromia and a solid solution of $(Fe_xCr_{1-x})O_3$. 
 
         \renewcommand{\coef}{0.45}
         \begin{figure}[h]
@@ -373,16 +427,16 @@
     \end{frame}
 
 \subsection{Semiconducting type}
-    \begin{frame}[allowframebreaks=1.0]{Semiconduction type}
-        \begin{itemize}
-            \item \citet{loucif2013} showed the effect of hydrogen pressure on 
-                  the semiconduction type on Ni-based alloy 600 oxidized in simulated PWR. 
-            \item The “V-shape” of the normalized photocurrent 
-                  reveals an isolating behavior of the oxide layer at high hydrogen pressure. 
-            \item The monotonous increase of the 
-                  normalized photocurrent towards more anodic potentials reveals 
-                  n-type semiconduction.
-        \end{itemize}
+    \begin{frame}{Semiconduction type}
+            \citet{loucif2013} showed the effect of hydrogen pressure on 
+            the semiconduction type on Ni-based alloy 600 oxidized in simulated PWR. 
+            
+            The “V-shape” of the normalized photocurrent 
+            reveals an isolating behavior of the oxide layer at high hydrogen pressure. 
+            
+            The monotonous increase of the 
+            normalized photocurrent towards more anodic potentials reveals 
+            n-type semiconduction.
 
         \renewcommand{\coef}{0.45}
         \begin{figure}[h]
@@ -409,17 +463,17 @@
 
 \subsection{High temperature PEC}
     \begin{frame}[allowframebreaks=1.0]{High temperature PEC}
-        \begin{itemize}
-            \item The majority of photoelectrochemical characterizations are performed at 
-            room temperature in simple glass/Plexiglas cells where the signal/noise 
-            ratio is very good.
-            \item High temperature photoelectrochemical characterizations 
-            require sophisticated metallic cells and transparent windows 
-            able to withstand the arch environment. 
-            \item Despite the need to improve the signal/noise ratio, the feasibility of 
-            the in-situ photoelectrochemical characterizations was demonstrated by 
-            \citet{bojinov2002} in 2002 and more recently by \citet{skocic2016} in 2015 
-        \end{itemize}
+        The majority of photoelectrochemical characterizations are performed at 
+        room temperature in simple glass/Plexiglas cells where the signal/noise 
+        ratio is very good.
+        
+        High temperature photoelectrochemical characterizations 
+        require sophisticated metallic cells and transparent windows 
+        able to withstand the arch environment. 
+        
+        Despite the need to improve the signal/noise ratio, the feasibility of 
+        the in-situ photoelectrochemical characterizations was demonstrated by 
+        \citet{bojinov2002} in 2002 and more recently by \citet{skocic2016} in 2015 
 
         \renewcommand{\coef}{0.45}
         \begin{figure}[h]
