@@ -1,4 +1,4 @@
-\documentclass[10pt,compress]{beamer}
+\documentclass[10pt,compress,handout]{beamer}
     \useoutertheme{miniframes}
     \usepackage[english]{babel}
     %\usepackage[margin=1in]{geometry}
@@ -126,7 +126,7 @@
 
 
 % BASICS
-\section{basics}
+\section{Basics}
 \subsection{Electronic Band Structure}
     \begin{frame}[allowframebreaks=1.0]{Band Model}
         Solids: conductors, semiconductors and insulators. 
@@ -139,13 +139,13 @@
         
         $E_g$ is the band gap with no allowed energy states. 
         
-        $E_F$ is the Fermi Level which describes the distribution of the electrons among both bands.
-        It represents the highest energy state that can be occupied level at 0K. 
+        $E_F$ is the Fermi level which describes the distribution of the electrons among both bands.
+        It represents the highest energy state that can be occupied at 0K. 
         It is equivalent to the electrochemical potential in solid phases.
         
         \framebreak
-        The electronic conduction = movement of electrons and/or holes in conduction/valence band.
-        
+        The electronic conduction is the movement of electrons and/or holes in conduction/valence band.
+
         The conduction depends on the number of available charge carriers
         in the conduction band and in the valence band. 
         
@@ -170,8 +170,8 @@
             \item thermal excitation: in the case of very low band gaps, it can be enough in order 
             to eject an electron from $E_v$ to $E_c$.
             \item photoexcitation: ejects electrons from $E_v$ to $E_c$
-            band when an incident photon ($h\nu > 5eV$) is absorbed.
-            \item doping: introduces additional energy level located in between $E_v$ to $E_c$.
+            band when an incident photon ($h\nu > E_g$) is absorbed.
+            \item doping: introduces additional energy level located in between $E_v$ and $E_c$.
         \end{itemize}
         
         \begin{figure}[h]
@@ -261,6 +261,38 @@
             \label{fig_space_charge_depletion}
         \end{figure}
 
+        \framebreak
+        
+        Depletion and accumulation as well as band bending can be obtained 
+        by polarizing the semiconductor.
+        
+        Depending on the applied potential, $U$, with respect to the flat band 
+        potential, $U_fb$, three different situations will occur:
+        \begin{itemize}
+            \item $U = U_{fb}$: flat band situation no matter the semiconductor type
+            \item $U > U_{fb}$: depletion (accumulation) in a case of n-type (p-type) semiconductor  
+            \item $U < U_{fb}$: accumulation (depletion) in a case of n-type (p-type) semiconductor
+        \end{itemize}
+        
+        \begin{figure}[H]
+        \centering
+            \includegraphics[width=0.6\textwidth]{tikz_band_bending.png}
+            %\caption{Schematic representation of the band bending in p-type and n-type 
+            %semiconductors in contact with an electrolyte \citep{memming2008, bard2002}:
+            % a) $U = U_{fb}$, b) $U > U_{fb}$, c) $U < U_{fb}$.}
+            \label{fig_band_bending}
+        \end{figure}
+    
+        Without illumination, cathodic (anodic) currents are favored in a case of 
+        accumulation of electrons (holes) for an n-type (p-type) semiconductor. 
+        
+        In fact, the majority charge carriers of n-type (p-type) semiconductors are 
+        electrons (holes). 
+        
+        Reciprocally, anodic (cathodic) currents are not favored in a case of 
+        depletion of electrons (holes) for an n-type (p-type) semiconductor. 
+        
+        The junction between a semiconductor and an electrolyte acts like a Schottky diode.
     \end{frame}
 
 \subsection{Semiconductor/electrolyte interface under illumination}
@@ -527,7 +559,7 @@
 % BIBLIOGRAPHY
 \begin{frame}[allowframebreaks=0.9]{References}
 \AtNextBibliography{\tiny}
-\nocite{*}
+%\nocite{*}
 \printbibliography
 \end{frame}
 
