@@ -134,6 +134,7 @@ export C_INCLUDE_PATH="$C_INCLUDE_PATH:$HOME/.local/include"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.local/lib"
 export LIBRARY_PATH="$LD_LIBRARY_PATH"
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 
