@@ -6,8 +6,8 @@ set realname = "Milan Skocic"
 
 # Gmail
 set imap_user = "milan.skocic@gmail.com"
-set smtp_url = "smtps://milan.skocic@gmail.com@smtp.gmail.com:465/"
-set smtp_authenticators = 'gssapi:login'
+set smtp_url = "smtps://milan.skocic@smtp.gmail.com:465/"
+#set smtp_authenticators = 'gssapi:login'
 set imap_pass = "xawk cbmq nmlm xuyx"
 set smtp_pass = "xawk cbmq nmlm xuyx"
 
@@ -16,36 +16,26 @@ set ssl_starttls = yes
 set ssl_force_tls = yes
 
 # My mailboxes
-set folder = "imaps://imap.gmail.com:993/[Gmail]"
-set spoolfile = "+All Mail"
-set postponed = "+Drafts"
-set record = "+Sent Mail"
-set trash = "+Trash"
+set folder = "imaps://milan.skocic@gmail.com@imap.gmail.com:993"
+set spoolfile = +INBOX
+set postponed = "+[Gmail]/Недовршено"
+set record = "+[Gmail]/Послато"
+set trash = "+[Gmail]/Отпад"
+set mbox = "+[Gmail]/Сва пошта"
 
-mailboxes =Important =Starred =Drafts ="Sent Mail" =Spam =Trash
+unset record # do not save sent - already done by gmail.
 
-# Where to put the stuff
-set header_cache = "$XDG_CACHE_HOME/neomutt/headers"
-set message_cachedir = "$XDG_CACHE_HOME/neomutt/bodies"
-set certificate_file = "$XDG_CACHE_HOME/neomutt/certificates"
-unset record# My mailboxes
-set folder = "imaps://imap.gmail.com:993/[Gmail]"
-set spoolfile = "+All Mail"
-set postponed = "+Drafts"
-set record = "+Sent Mail"
-set trash = "+Trash"
+mailboxes =         \
+$spoolfile          \
+$postponed          \
+$trash              \
+$mbox               \
 
-mailboxes =Important =Starred =Drafts ="Sent Mail" =Spam =Trash
 
 # Where to put the stuff
 set header_cache = "$XDG_CACHE_HOME/neomutt/headers"
 set message_cachedir = "$XDG_CACHE_HOME/neomutt/bodies"
 set certificate_file = "$XDG_CACHE_HOME/neomutt/certificates"
-unset record
-
-set signature = "$XDG_CONFIG_HOME/neomutt/signature"
-
-set editor = "nvim"
 
 # link to mailcap file
 set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
@@ -53,6 +43,8 @@ set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
 bind attach <return> view-mailcap             
 # save attachments to a folder
 macro attach s '<save-entry> <bol>~/Documents/attachments/<eol>' 'save attachment'
-auto_view text/html		# automatically show html (mailcap uses lynx)
+auto_view text/html	# automatically show html (mailcap uses lynx)
 
+# others
 set signature = "$XDG_CONFIG_HOME/neomutt/signature"
+set editor = "nvim"
