@@ -5,7 +5,7 @@ target=full_bw.png
 cp -fv $url/$target ./src/figures/
 
 url=../../../3-Resource/figures/png
-target=*.png
+target=PEC-*.png
 cp -fv $url/$target ./src/figures/
 
 url=../../../3-Resource/references/
