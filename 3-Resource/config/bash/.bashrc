@@ -92,7 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lg='lazygit'
-alias nm='neomutt'
+alias nmutt='neomutt'
 alias apts='sudo apt search'
 alias aptu='sudo apt update && sudo apt upgrade'
 
