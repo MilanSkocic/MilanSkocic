@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Common libraries used for generating the figures with Python."""
 
+# For all
 import pathlib, sys, os
 
 import matplotlib as mpl
@@ -15,6 +16,7 @@ import pandas as pd
 FORMATS = ["png", "pdf"]
 DPI = 300
 
+# EIS
 def formatter_pi(x, pos):
     """Format axis with respect to n pi/2.""" 
     x = x * 2 * 2 # x is number of periods which correspond to 2pi and we want subidivision in pi/2 so multiply again by 2
@@ -144,7 +146,6 @@ def Z_Wd(w, Rd, nd, Td):
         Complex impedance in Ohms.
     """
     return Rd * np.tanh((1j*Td*w)**nd) / (1j*Td*w)**nd
-    
     
 def Z_Wm(w, Rm, nm, Tm):
     r"""
