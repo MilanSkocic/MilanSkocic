@@ -19,7 +19,8 @@ TEX_SRC=./src/PEC-band_bending.tex \
 		./src/PEC-interface_potential.tex \
 		./src/PEC-photocurrent_generation.tex \
 		./src/PEC-photocurrent_plieth.tex \
-		./src/PEC-space_charge_depletion.tex
+		./src/PEC-space_charge_depletion.tex \
+		./src/EIS-black_box.tex
 TEX_OUTPUTS=$(patsubst $(SRC_FOLDER)/%.tex, $(PNG_FOLDER)/%.png, $(TEX_SRC))
 
 PY_SRC=./src/EIS-AC_waves.py \
