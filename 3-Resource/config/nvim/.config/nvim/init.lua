@@ -24,9 +24,6 @@ require("lazy").setup({
     {import = "plugins"}
 })
 
---vim.cmd([[colorscheme NeoSolarized]])
---vim.cmd([[let g:neosolarized_contrast = "high"]])
---vim.cmd([[let g:neosolarized_visibility = "normal"]])
 vim.cmd([[colorscheme catppuccin-mocha]])
 vim.cmd([[set termguicolors]])
 vim.cmd([[set cc=80]])
@@ -72,9 +69,12 @@ local cmp = require'cmp'
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['pyright'].setup({capabilities = capabilities, filetypes={"python"}})
-  require('lspconfig')['fortls'].setup({capabilities = capabilities, filetypes={"fortran"}})
-  require('lspconfig')['clangd'].setup({capabilities = capabilities, filetypes={"cpp"}})
+  vim.lsp.config("pyright", {capabilities = capabilities, filetypes={"python"}})
+  vim.lsp.enable("pyright")
+  vim.lsp.config("fortls", {capabilities = capabilities, filetypes={"fortran"}})
+  vim.lsp.enable("fortls")
+  vim.lsp.config("clangd", {capabilities = capabilities, filetypes={"cpp"}})
+  vim.lsp.enable("clangd")
   require("mason").setup()
 
   local mason_lspconfig = require 'mason-lspconfig'
