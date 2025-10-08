@@ -106,6 +106,94 @@ return {
         { trig = ";L", snippetType="autosnippet", wordTrig=false },
         { t("\\Lambda") }
     ),
+    s(
+        { trig = ";w", snippetType="autosnippet", wordTrig=false },
+        { t("\\omega") }
+    ),
+    s(
+        { trig = ";W", snippetType="autosnippet", wordTrig=false },
+        { t("\\Omega") }
+    ),
+    s(
+        { trig = ";p", snippetType="autosnippet", wordTrig=false },
+        { t("\\pi") }
+    ),
+    s(
+        { trig = ";P", snippetType="autosnippet", wordTrig=false },
+        { t("\\Pi") }
+    ),
+    s(
+        { trig = ";m", snippetType="autosnippet", wordTrig=false },
+        { t("\\mu") }
+    ),
+    s(
+        { trig = ";M", snippetType="autosnippet", wordTrig=false },
+        { t("\\Mu") }
+    ),
+    s(
+        { trig = ";r", snippetType="autosnippet", wordTrig=false },
+        { t("\\rho") }
+    ),
+    s(
+        { trig = ";R", snippetType="autosnippet", wordTrig=false },
+        { t("\\Rho") }
+    ),
+    s(
+        { trig = ";s", snippetType="autosnippet", wordTrig=false },
+        { t("\\sigma") }
+    ),
+    s(
+        { trig = ";S", snippetType="autosnippet", wordTrig=false },
+        { t("\\Sigma") }
+    ),
+    s(
+        { trig = ";v", snippetType="autosnippet", wordTrig=false },
+        { t("\\nu") }
+    ),
+    s(
+        { trig = ";V", snippetType="autosnippet", wordTrig=false },
+        { t("\\Nu") }
+    ),
+    s(
+        { trig = ";x", snippetType="autosnippet", wordTrig=false },
+        { t("\\chi") }
+    ),
+    s(
+        { trig = ";X", snippetType="autosnippet", wordTrig=false },
+        { t("\\Chi") }
+    ),
+    s(
+        { trig = ";t", snippetType="autosnippet", wordTrig=false },
+        { t("\\tau") }
+    ),
+    s(
+        { trig = ";T", snippetType="autosnippet", wordTrig=false },
+        { t("\\Tau") }
+    ),
+    s(
+        { trig = ";k", snippetType="autosnippet", wordTrig=false },
+        { t("\\kappa") }
+    ),
+    s(
+        { trig = ";K", snippetType="autosnippet", wordTrig=false },
+        { t("\\Kappa") }
+    ),
+    s(
+        { trig = ";z", snippetType="autosnippet", wordTrig=false },
+        { t("\\zeta") }
+    ),
+    s(
+        { trig = ";Z", snippetType="autosnippet", wordTrig=false },
+        { t("\\Zeta") }
+    ),
+    s(
+        { trig = ";o", snippetType="autosnippet", wordTrig=false },
+        { t("\\theta") }
+    ),
+    s(
+        { trig = ";O", snippetType="autosnippet", wordTrig=false },
+        { t("\\Theta") }
+    ),
 
     -- sections
     s({trig = "h1", condition = line_begin },
