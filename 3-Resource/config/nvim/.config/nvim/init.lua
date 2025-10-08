@@ -30,7 +30,7 @@ require("luasnip").config.set_config({
   store_selection_keys = "<Tab>",
 })
 
-require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/snippets/})
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/luasnippets/"})
 
 vim.cmd([[colorscheme catppuccin-mocha]])
 vim.cmd([[set termguicolors]])
