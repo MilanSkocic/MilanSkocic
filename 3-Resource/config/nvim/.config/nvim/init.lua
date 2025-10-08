@@ -5,6 +5,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.g.mapleader = " "
+vim.g.tex_flavor = "latex"
 
 -- Boostrap lazyvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -30,7 +31,7 @@ require("luasnip").config.set_config({
   store_selection_keys = "<Tab>",
 })
 
-require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/luasnippets/"})
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/lua/snippets/"})
 
 vim.cmd([[colorscheme catppuccin-mocha]])
 vim.cmd([[set termguicolors]])
