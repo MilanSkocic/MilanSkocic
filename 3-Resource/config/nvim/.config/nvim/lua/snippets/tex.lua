@@ -1,5 +1,13 @@
 local line_begin = require("luasnip.extras.expand_conditions").line_begin
 
+local get_visual = function(args, parent)
+    if (#parent.snippet.env.LS_SELECT_RAW > 0) then
+        return sn(nil, i(1, parent.snippet.env.LS_SELECT_RAW))
+    else  -- If LS_SELECT_RAW is empty, return a blank insert node
+        return sn(nil, i(1))
+    end
+end
+
 return {
     -- formatting
     s({trig = "it"},
@@ -74,57 +82,105 @@ return {
         { trig = ";E", snippetType="autosnippet", wordTrig=false },
         { t("\\Epsilon") }
     ),
+    s(
+        { trig = ";n", snippetType="autosnippet", wordTrig=false },
+        { t("\\eta") }
+    ),
+    s(
+        { trig = ";N", snippetType="autosnippet", wordTrig=false },
+        { t("\\Eta") }
+    ),
+    s(
+        { trig = ";f", snippetType="autosnippet", wordTrig=false },
+        { t("\\phi") }
+    ),
+    s(
+        { trig = ";F", snippetType="autosnippet", wordTrig=false },
+        { t("\\Phi") }
+    ),
+    s(
+        { trig = ";l", snippetType="autosnippet", wordTrig=false },
+        { t("\\lambda") }
+    ),
+    s(
+        { trig = ";L", snippetType="autosnippet", wordTrig=false },
+        { t("\\Lambda") }
+    ),
 
     -- sections
     s({trig = "h1", condition = line_begin },
-      fmta(
-        [[\section{<>}]],
-        { i(1) }
-      )
+        fmta(
+            [[\section{<>}]],
+            { d(1, get_visual) }
+        )
+    ),
+    s({trig = "h2", condition = line_begin },
+        fmta(
+            [[\subsection{<>}]],
+            { d(1, get_visual) }
+        )
+    ),
+    s({trig = "h3", condition = line_begin },
+        fmta(
+            [[\subsubsection{<>}]],
+            { d(1, get_visual) }
+        )
     ),
 
     -- environments
     s({trig = 'ff'},
-      fmta(
-        [[\frac{<>}{<>}]],
-        {
-          i(1),
-          i(2)
-        }
-      )
+        fmta(
+            [[\frac{<>}{<>}]],
+            {
+              i(1),
+              i(2)
+            }
+        )
     ),
     s({trig = 'ii'},
-      fmta(
-        [[\item <> ]],
-        {
-          i(1),
-        }
-      )
+        fmta(
+            [[\item <> ]],
+            {
+              i(1),
+            }
+        )
     ),
     s({trig="new", condition = line_begin},
-      fmta(
-        [[
-          \begin{<>}
-              <>
-          \end{<>}
-        ]],
-        {
-          i(1),
-          i(2),
-          rep(1),
-        }
-      )
+        fmta(
+            [[
+              \begin{<>}
+                  <>
+              \end{<>}
+            ]],
+            {
+              i(1),
+              i(2),
+              rep(1),
+            }
+        )
     ),
     s({trig="neweq", condition = line_begin},
-      fmta(
-        [[
-          \begin{equation}
-              <>
-          \end{equation}
-        ]],
-        {
-          i(1),
-        }
-      )
+        fmta(
+            [[
+              \begin{equation}\label{}
+                  <>
+              \end{equation}
+            ]],
+            {
+              i(1),
+            }
+        )
+    ),
+    s({trig="newfig", condition = line_begin},
+        fmta(
+            [[
+                \begin{figure}[h]
+                    \includegraphics[width=0.6\textwidth]{<>}
+                    \caption{<>}
+                    \label{fig_<>}
+                \end{figure}
+            ]],
+            {i(1), i(2), i(3)}
+        )
     ),
 }
