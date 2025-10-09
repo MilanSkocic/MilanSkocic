@@ -270,12 +270,21 @@ return {
             [[
                 \begin{figure}[h]
                     \centering
-                    \includegraphics[width=0.6\textwidth]{<>}
+                    \includegraphics[width=<>\textwidth]{<>}
                     \caption{<>}
                     \label{fig_<>}
                 \end{figure}
             ]],
-            {i(1), i(2), i(3)}
+            {i(1), i(2), i(3), i(4)}
         )
     ),
+    s({trig="graph", condition = line_begin},
+        fmta(
+            [[
+                \includegraphics[width=<>\textwidth]{<>}
+            ]],
+            {i(1), i(2)}
+        )
+    ),
+
 }
