@@ -91,29 +91,34 @@
     
 \section{Introduction}
     \begin{frame}{Introduction}
-        Time domain (incomplete!) \citep{bard2001}:
+        There are 2 categories of electrochemical techniques: 
+        time domain and frequency domain \citep{bard2001}.
+
+        Time domain :
         \begin{itemize}
-            \item Polarisation: $I=f(U)$
-            \item Potential step: $\Delta U$, $I(t)$
-            \item Zero Resistance Ammeter: $\int j_{gal} \cdot dt$
+            \item Voltammetry: $I=f(U)$.
+            \item Chronoamperometry: $\Delta U$, $I(t)$.
+            \item Zero Resistance Ammeter: $\int j_{gal} \cdot dt$.
+            \item \ldots
         \end{itemize}
 
-        Frequency domain \citep{bard2001}:
+        Frequency domain:
         \begin{itemize}
-            \item Electrochemical Impedance Spectroscopy
+            \item Electrochemical Impedance Spectroscopy: EIS.
+            \item PhotoElectrochemical Impedance Spectroscopy: PEIS.
         \end{itemize}
 
-        Advantages of EIS \citep{bard2001}:
+        Advantages of EIS:
         \begin{itemize}
-            \item Measurement in small perturbations (approximately linear)
-            \item Different processes have different time constants
-            \item Large frequency range from $\mu Hz$ to $GHz$
+            \item Measurement in small perturbations (approximately linear).
+            \item Different processes have different time constants.
+            \item Large frequency range from $\mu Hz$ to $GHz$.
         \end{itemize}
     \end{frame}
 
 \section{Basics}
     \begin{frame}{Black Box Approach}
-        Assume a black box with terminals .
+        Assume a black box with terminals.
 
         One applies a voltage and measures the current response (or vice versa).
 
@@ -121,7 +126,7 @@
         with $0 \le \omega < \infty$:
         \begin{itemize}
             \item Voltage $V(\omega) = V_0 e^{j \omega t}$  
-            \item Voltage $I(\omega) = I_0 e^{j \omega t}$  
+            \item Voltage $I(\omega) = I_0 e^{j \omega t - \Phi}$  
         \end{itemize}
         
         \begin{columns}
@@ -142,9 +147,100 @@
     \end{frame}
     
     \begin{frame}{What is EIS?}
-    a
+        The complex impedance is determined from the imposed voltage/current and the measured
+        current/voltage through the Ohm's law:
+        $$ Z(\omega) = \frac{V(\omega)}{I(\omega)} = \frac{V_0}{I_0} e^{j \Phi} = Z_0 e^{j\Phi}$$
+
+        Therefore:
+        \begin{itemize}
+            \item  resistive behavior: $ReZ=Z_0 \cdot \cos \Phi$
+            \item  capacitive/Inductive behavior $ImZ=Z_0 \cdot \sin \Phi$
+        \end{itemize}
+        
+        Sometimes, the complex admittance $Y(\omega)$ can also be used which is defined as the inverse of the
+        complex impedance $Z(\omega)$ 
+        $$Y(\omega)=\frac{1}{Z(\omega)}$$
     \end{frame}
 
+    \begin{frame}[allowframebreaks=1.0]{Representations}
+        The impedance $Z(\omega)$ can be represented in two different ways:
+        \begin{itemize}
+            \item  Nyquist plot: represents the real and imaginary parts of $Z(\omega)$ using cartesian coordinates.
+            \item  Bode plot: shows the phase shift and magnitude changes in the rang of applied frequencies.
+        \end{itemize}
+    
+        The Bode plot has great advantages for observing phase changes. 
+        Therefore, it is useful for the study of sensors, filters, and transistors in electronic devices.
+        
+        The Nyquist plot provides a better insight into the possible mechanisms.
+
+        \framebreak
+        Among these two types of representations, the Nyquist plot is more often used to analyze the characteristics of
+        electrochemical processes occurring during corrosion.
+        \begin{columns}
+            \centering
+            \column{0.33\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{EIS-example-np}
+                Nyquist Plot
+            \column{0.33\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{EIS-example-bm}
+                Bode Plot - Modulus
+            \column{0.33\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{EIS-example-bp}
+                Bode Plot - Phase
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}{Series and parallel connections}
+        Series connections: $Z_1$ --- $Z_2$ --- \ldots --- $Z_n$
+        $$ Z_{eq} = \sum _{i=1}^n Z_i $$
+
+        Parallel connections: $Z_1$ / $Z_2$ / \ldots / $Z_n$ 
+        $$ \frac{1}{Z_{eq}} = \sum _{i+1}^n \frac{1}{Z_i} $$
+        $$ Z_{eq} = \left( \sum _{i=1}^n \frac{1}{Z_i} \right)^{-1} $$
+    \end{frame}
+
+    \begin{frame}{Equivalent Circuit Models}
+        The circuit model for EIS consists of a combination of electrical circuit elements:
+        \begin{itemize}
+            \item ideal elements:
+            \begin{itemize}
+                \item  resistors (R)
+                \item  capacitors (C)
+                \item inductors (L)
+            \end{itemize}
+            \item nonideal capacitor-like element: Constant Phase Element (CPE or Q)
+            \item diffusion elements:
+            \begin{itemize}
+                \item semi-infinite Warburg (W)
+                \item Finite Length Warburg ($W_{\delta}$ or O)
+                \item Finite Space Warburg ($W_m$ or T)
+            \end{itemize}
+        \end{itemize}
+        The circuit model represents the entire system of the electrochemical cell.
+    
+        The aim is to build an optimal circuit model that is physically meaningful and minimizes the
+        number of variables.
+    \end{frame}
+
+    \begin{frame}{Circuit Elements}
+        
+    \end{frame}
+    
+    \begin{frame}{Circuit Elements and Physical Parameters}
+        
+    \end{frame}
+    
+    \begin{frame}{Simplified Randles Circuit}
+        
+    \end{frame}
+
+    \begin{frame}{Randles Circuit}
+        
+    \end{frame}
 
 \section{Applications}
 
