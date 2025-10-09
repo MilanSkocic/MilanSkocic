@@ -195,6 +195,12 @@ return {
         { t("\\Theta") }
     ),
 
+    -- math
+    s(
+        { trig = "jwt"},
+        { t("j\\omega t") }
+    ),
+
     -- sections
     s({trig = "h1", condition = line_begin },
         fmta(
@@ -263,6 +269,7 @@ return {
         fmta(
             [[
                 \begin{figure}[h]
+                    \centering
                     \includegraphics[width=0.6\textwidth]{<>}
                     \caption{<>}
                     \label{fig_<>}
