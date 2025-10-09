@@ -91,19 +91,19 @@
     
 \section{Introduction}
     \begin{frame}{Introduction}
-        Time domain (incomplete!):
+        Time domain (incomplete!) \citep{bard2001}:
         \begin{itemize}
             \item Polarisation: $I=f(U)$
             \item Potential step: $\Delta U$, $I(t)$
             \item Zero Resistance Ammeter: $\int j_{gal} \cdot dt$
         \end{itemize}
 
-        Frequency domain:
+        Frequency domain \citep{bard2001}:
         \begin{itemize}
             \item Electrochemical Impedance Spectroscopy
         \end{itemize}
 
-        Advantages of EIS:
+        Advantages of EIS \citep{bard2001}:
         \begin{itemize}
             \item Measurement in small perturbations (approximately linear)
             \item Different processes have different time constants
@@ -113,7 +113,32 @@
 
 \section{Basics}
     \begin{frame}{Black Box Approach}
-    a
+        Assume a black box with terminals .
+
+        One applies a voltage and measures the current response (or vice versa).
+
+        Periodic signal with an angular frequency $\omega = 2\pi f$
+        with $0 \le \omega < \infty$:
+        \begin{itemize}
+            \item Voltage $V(\omega) = V_0 e^{j \omega t}$  
+            \item Voltage $I(\omega) = I_0 e^{j \omega t}$  
+        \end{itemize}
+        
+        \begin{columns}
+            \centering
+            \column{0.3\textwidth}\centering
+                \begin{figure}[h]
+                    \includegraphics{EIS-black_box}
+                \end{figure}
+            \column{0.35\textwidth}\centering
+                \begin{figure}
+                    \includegraphics[width=\textwidth]{EIS-AC_waves}
+                \end{figure}
+            \column{0.35\textwidth}\centering
+                \begin{figure}
+                    \includegraphics[width=1.3\textwidth]{EIS-AC_waves-trigcircle}
+                \end{figure}
+        \end{columns}
     \end{frame}
     
     \begin{frame}{What is EIS?}
