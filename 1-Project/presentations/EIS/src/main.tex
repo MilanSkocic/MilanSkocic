@@ -72,7 +72,7 @@
     \usepackage{circuitikz}
     \usetikzlibrary{decorations.pathmorphing,arrows,calc}
 
-    \title{Electrochemical Impedance Spectroscopy}
+    \title{Electrochemical Impedance Spectroscopy for Corrosion}
     \author{M. Skocic, PhD Electrochemistry and Materials}
     \date{\vfill \includegraphics[width=0.70\textwidth]{full_bw.png}}   
 
@@ -117,6 +117,7 @@
     \end{frame}
 
 \section{Basics}
+    \subsection{What is EIS?}
     \begin{frame}{Black Box Approach}
         Assume a black box with terminals.
 
@@ -146,7 +147,7 @@
         \end{columns}
     \end{frame}
     
-    \begin{frame}{What is EIS?}
+    \begin{frame}{Complex Impedance}
         The complex impedance is determined from the imposed voltage/current and the measured
         current/voltage through the Ohm's law:
         $$ Z(\omega) = \frac{V(\omega)}{I(\omega)} = \frac{V_0}{I_0} e^{j \Phi} = Z_0 e^{j\Phi}$$
@@ -162,6 +163,7 @@
         $$Y(\omega)=\frac{1}{Z(\omega)}$$
     \end{frame}
 
+    \subsection{Visualization}
     \begin{frame}[allowframebreaks=1.0]{Representations}
         The impedance $Z(\omega)$ can be represented in two different ways:
         \begin{itemize}
@@ -193,7 +195,8 @@
                 Bode Plot - Phase
         \end{columns}
     \end{frame}
-
+    
+    \subsection{Connections}
     \begin{frame}{Series and parallel connections}
         Series connections: $Z_1$ --- $Z_2$ --- \ldots --- $Z_n$
         $$ Z_{eq} = \sum _{i=1}^n Z_i $$
@@ -203,6 +206,7 @@
         $$ Z_{eq} = \left( \sum _{i=1}^n \frac{1}{Z_i} \right)^{-1} $$
     \end{frame}
 
+    \subsection{Equivalent Circuits}
     \begin{frame}{Equivalent Circuit Models}
         The circuit model for EIS consists of a combination of electrical circuit elements\citep{orazem2008}:
         \begin{itemize}
@@ -251,6 +255,7 @@
         \footnotetext[4]{CPE = Constant Phase Element}
     \end{frame}
     
+    \subsection{Physical Parameters}
     \begin{frame}{Circuit Elements and Physical Parameters}
         \begin{columns}[t]
             \column{0.7\textwidth}
@@ -295,6 +300,7 @@
         \end{columns}
     \end{frame}
     
+    \subsection{Examples}
     \begin{frame}{Simplified Randles Circuit}
         Reflects an electrochemical reaction controlled only by kinetics \citep{lazanas2023}.
 
