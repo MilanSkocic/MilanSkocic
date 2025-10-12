@@ -204,7 +204,7 @@
     \end{frame}
 
     \begin{frame}{Equivalent Circuit Models}
-        The circuit model for EIS consists of a combination of electrical circuit elements:
+        The circuit model for EIS consists of a combination of electrical circuit elements\citep{orazem2008}:
         \begin{itemize}
             \item ideal elements:
             \begin{itemize}
@@ -223,22 +223,111 @@
         The circuit model represents the entire system of the electrochemical cell.
     
         The aim is to build an optimal circuit model that is physically meaningful and minimizes the
-        number of variables.
+        number of variables \citep{boukamp1986}.
     \end{frame}
 
     \begin{frame}{Circuit Elements}
-        
+        \begin{columns}
+            \column{0.5\textwidth}
+                $R$ (Resistor): $Z(\omega)=R$ 
+
+                $C$ (Capacitor): $Z(\omega)=\frac{1}{jC\omega}$
+
+                $L$ (Inductor): $Z(\omega)=jL\omega$
+
+                $Q$ (CPE\footnotemark[4]): $Z(\omega)=\frac{1}{Q(j\omega)^{\alpha}}$
+
+                $W$ (SIW\footnotemark[1]): $Z(\omega)=\frac{\sigma}{\sqrt{\omega}} \cdot (1-j)$
+                
+                $W_{\delta}$ (FLW\footnotemark[2]): $Z(\omega)=\frac{R_{\delta} \cdot \tanh \sqrt{j\omega\tau}}{\sqrt{j\omega\tau}}$
+                
+                $W_m$ (FSW\footnotemark[3]): $Z(\omega)=\frac{R_{m} \cdot \coth \sqrt{j\omega\tau}}{\sqrt{j\omega\tau}}$
+            \column{0.5\textwidth}
+                \includegraphics[width=0.5\paperwidth]{EIS-example-np_circuit_elements}
+        \end{columns}
+        \footnotetext[1]{SIW = Semi-Infinite Warburg}
+        \footnotetext[2]{FLW = Finite Length Warburg}
+        \footnotetext[3]{FSW = Finite Space Warburg}
+        \footnotetext[4]{CPE = Constant Phase Element}
     \end{frame}
     
     \begin{frame}{Circuit Elements and Physical Parameters}
-        
+        \begin{columns}[t]
+            \column{0.7\textwidth}
+                Resistors can be linked to resistivity or kinetics \citep{barsoukov2005}\\
+                $R = \rho \cdot \frac{\delta}{A}$ \\
+                $R = \frac{RT}{FAj_0(\alpha _a + \alpha _c)} = \frac{RT}{AF^2k^0K_c (\alpha _a + \alpha _c)}$\\[0.25cm]
+
+                Capacitors can be linked to layer thickness: \\
+                $C = \frac{\epsilon \epsilon _0 A}{\delta}$\\[0.25cm]
+
+                Warburg elements can be linked to diffusion\\
+                $\sigma = \frac{RT}{Az^2F^2\sqrt{2}} \cdot \left( \frac{1}{\sqrt{D}C^*_O} + \frac{1}{\sqrt{D}C^*_R} \right)$\\
+                $R = \frac{RT}{Az^2F^2\sqrt{2}} \cdot \frac{\delta}{DC^*}$\\
+                $\tau = \frac{\delta ^2}{D}$\\[0.25cm]
+
+                Coupling with other electrochemical techniques helps for determining all 
+                necessary parameters.
+            \column{0.3\textwidth}{\tiny
+                $R$: resistance [$\Omega$]
+
+                $\rho$: resistivity [$\Omega \cdot m$]
+                
+                $\delta$: thickness [$m$]
+                
+                $A$: Area [$m^2$]
+                
+                $j_0$: exchange current density [$A \cdot m^{-2}$]
+                
+                $k^0$: kinetics constant [$m \cdot s^{-1}$]
+                
+                $\alpha _a$: anodic transfer coefficient 
+                
+                $\alpha _c$: cathodic transfer coefficient 
+                
+                $\epsilon$: relative permittivity
+                
+                $\epsilon _0$: vaccum permittivity [$F \cdot m^{-1}$]
+                
+                $C^*$: bulk concentration [$mol \cdot m^{-3}$]
+
+            }
+        \end{columns}
     \end{frame}
     
     \begin{frame}{Simplified Randles Circuit}
-        
+        Reflects an electrochemical reaction controlled only by kinetics \citep{lazanas2023}.
+
+        $R_{el}$: electrolyte resistance
+
+        $R_ct$: charge transfer resistance
+
+        $C_{dl}$: double layer capacitance
+
+        \begin{columns}
+            \column{0.5\textwidth}
+                \includegraphics[width=\textwidth]{EIS-circuit-simple_randles}
+            \column{0.5\textwidth}
+                \includegraphics[width=\textwidth]{EIS-example-simple_randles}
+        \end{columns}
     \end{frame}
 
     \begin{frame}{Randles Circuit}
+        Reflects electrochemical reaction controlled by kinetics and diffusion \citep{lazanas2023}.
+
+        $R_{el}$: electrolyte resistance
+
+        $R_ct$: charge transfer resistance
+
+        $C_{dl}$: double layer capacitance
+
+        $W$: semi-infinite diffusion
+        \begin{columns}
+            \column{0.5\textwidth}
+                \includegraphics[width=\textwidth]{EIS-circuit-randles}
+            \column{0.5\textwidth}
+                \includegraphics[width=\textwidth]{EIS-example-randles}
+        \end{columns}
         
     \end{frame}
 
