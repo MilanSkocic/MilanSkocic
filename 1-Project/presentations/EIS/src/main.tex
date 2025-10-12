@@ -338,6 +338,48 @@
     \end{frame}
 
 \section{Applications}
+    \subsection{Conductivity}
+    \begin{frame}{Conductivity vs Temperature}
+        EIS can be used to estimate the electrolyte conductivity at different temperatures.
+
+        A calibration step is necessary at room temperature in order 
+        to define the cell constant: $\kappa = \frac{l}{A}$
+
+        Electrolyte containing $0.2 \,mmol \cdot L^{-1}$ $LiOH$ and $63 \, mmol \cdot L^{-1}$ $H_3BO_3$.
+
+
+        Experimental values very close to those computed with the software
+        OLI (v9.3) using the MSE database.
+    \end{frame}
+
+\section{Conclusion}
+    \begin{frame}{Conclusions}
+        \scriptsize
+        EIS technique
+            \begin{itemize}
+                \item  EIS is a frequency domain electrochemical technique with small perturbations (linearization)
+                \item  The circuit model represents the entire system
+                \item  The objective is to build an optimal circuit model that is physically meaningful and minimizes the number of
+                variables.
+                \item  Evaluation of model with equivalent circuits and numerical fitting (CNLS)
+            \end{itemize}
+
+        Applications
+            \begin{itemize}
+                \item  Qualitative analysis of corrosion mechanism by observing the Nyquist plots for different alloys
+                \item  Quantitative analysis for estimating the corrosion current densities
+                \item  Quantitative analysis for computing physical parameters such as diffusion coefficients
+                \item  Computation of electrolyte conductivity with respect to temperature
+            \end{itemize}
+
+        Difficulties
+            \begin{itemize}
+                \item  Noisy data at high temperature
+                \item  Choice of the equivalent circuit
+                \item  Propagation of errors on computed parameters
+            \end{itemize}
+    \end{frame}
+
 
 % BIBLIOGRAPHY
 \begin{frame}[allowframebreaks=0.9]{References}
