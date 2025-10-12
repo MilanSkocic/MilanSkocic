@@ -25,7 +25,7 @@ return {
     s({trig = "em"},
       fmta(
         [[\emph{<>}]],
-        { i(1) }
+        { d(1, get_visual) }
       )
     ),
     s({trig = "ul"},
