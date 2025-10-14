@@ -343,13 +343,23 @@
         EIS can be used to estimate the electrolyte conductivity at different temperatures.
 
         A calibration step is necessary at room temperature in order 
-        to define the cell constant: $\kappa = \frac{l}{A}$
+        to define the cell constant: $\kappa = A/l$
 
         Electrolyte containing $0.2 \,mmol \cdot L^{-1}$ $LiOH$ and $63 \, mmol \cdot L^{-1}$ $H_3BO_3$.
+%        Experimental values very close to those computed with the software
+%        OLI (v9.3) using the MSE database.
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.65\textwidth]{EIS-application-conductivity}
+        \end{figure}
+    \end{frame}
 
-
-        Experimental values very close to those computed with the software
-        OLI (v9.3) using the MSE database.
+    \subsection{Numerical Fitting}
+    \begin{frame}{Simple Models}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.65\textwidth]{EIS-circuit-randles-flw}
+        \end{figure}
     \end{frame}
 
 \section{Conclusion}
