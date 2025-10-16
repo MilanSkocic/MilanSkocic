@@ -130,7 +130,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/fiji"
 export C_INCLUDE_PATH="$C_INCLUDE_PATH:$HOME/.local/include"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.local/lib"
 export LIBRARY_PATH="$LD_LIBRARY_PATH"
