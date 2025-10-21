@@ -29,16 +29,8 @@ return {
       )
     ),
 
-    -- Greek letters
     s(
         { trig = ";m", snippetType="autosnippet",  wordTrig=false },
         { t("if __name__ == \"__main__\":") }
-    ),
-
-    s({trig = "h3", condition = line_begin },
-        fmta(
-            [[\subsubsection{<>}]],
-            { d(1, get_visual) }
-        )
     ),
 }
