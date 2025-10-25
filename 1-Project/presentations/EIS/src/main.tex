@@ -110,7 +110,7 @@
 
         Advantages of EIS:
         \begin{itemize}
-            \item Measurement in small perturbations (approximately linear).
+            \item Measurement in small perturbations (linearization).
             \item Different processes have different time constants.
             \item Large frequency range from $\mu Hz$ to $GHz$.
         \end{itemize}
@@ -155,7 +155,7 @@
         Therefore:
         \begin{itemize}
             \item  resistive behavior: $ReZ=Z_0 \cdot \cos \Phi$
-            \item  capacitive/Inductive behavior $ImZ=Z_0 \cdot \sin \Phi$
+            \item  capacitive/inductive behavior $ImZ=Z_0 \cdot \sin \Phi$
         \end{itemize}
         
         Sometimes, the complex admittance $Y(\omega)$ can also be used which is defined as the inverse of the
@@ -188,7 +188,7 @@
             \column{0.33\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{EIS-example-bm}
-                Bode Plot - Modulus
+                Bode Plot - Magnitude
             \column{0.33\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{EIS-example-bp}
@@ -220,11 +220,11 @@
             \item diffusion elements:
             \begin{itemize}
                 \item semi-infinite Warburg (W)
-                \item Finite Length Warburg ($W_{\delta}$ or O)
-                \item Finite Space Warburg ($W_m$ or T)
+                \item finite length warburg ($W_{\delta}$ or O or FLW)
+                \item finite space warburg ($W_m$ or T or FSW)
             \end{itemize}
         \end{itemize}
-        The circuit model represents the entire system of the electrochemical cell.
+        The circuit model represents the entire system.
     
         The aim is to build an optimal circuit model that is physically meaningful and minimizes the
         number of variables \citep{boukamp1986}.
@@ -323,7 +323,7 @@
 
         $R_{el}$: electrolyte resistance
 
-        $R_ct$: charge transfer resistance
+        $R_{ct}$: charge transfer resistance
 
         $C_{dl}$: double layer capacitance
 
@@ -365,10 +365,9 @@
             \centering
             \includegraphics[width=0.65\textwidth]{EIS-application-contributions-peyret}
         \end{figure}
-        
     \end{frame}
 
-    \section{Quantitative Analysis} 
+    \subsection{Quantitative Analysis} 
     \begin{frame}{Equivalent Circuit}
         For alloy forming passive layers, the diffusion in the electrolyte 
         is much faster than in the oxide.
@@ -386,28 +385,45 @@
                     \includegraphics[width=\textwidth]{EIS-circuit-randles-flw}
                 \end{figure}
             \column{0.5\textwidth}
+                \centering
                 \begin{figure}
                     \centering
                     \includegraphics[width=\textwidth]{EIS-application-fit}
                 \end{figure}
+                \tiny M. Skocic, unpublished work, 2020.
         \end{columns}
     \end{frame}
 
     \begin{frame}{Numerical Fitting}
-        \begin{tabular}{lll}
-            \toprule
-            Name                               & A                 & B               \\ \midrule
-            $R_{el}$                           & $31 \pm 1$        & $99 \pm 2$      \\
-            $R_{ct}$                           & $190 \pm 20$      & $280 \pm 2$     \\
-            $W$                                & $3000 \pm 400$    & $5000 \pm 300$  \\
-            $n$                                & $0.36 \pm 0.01$   & $0.49 \pm 0.01$ \\
-            $\tau$                             & $120 \pm 40$      & $62 \pm 5$      \\
-            $Q_{ox} \cdot 10^6 $               & $56 \pm 8$        & $102 \pm 8$     \\
-            $a_{ox}$                           & $0.69 \pm 0.02$   & $0.60 \pm 0.01$ \\
-            $\delta(\mu m)$                    & $0.10 \pm 0.03$   & $0.15 \pm 0.05$ \\
-            $D \cdot 10^{12} (cm^2 \cdot s^-1)$& $1.7 \pm 0.5$     & $1.9 \pm 0.9$   \\
-            \bottomrule
-        \end{tabular}
+        Numerical fitting using CNLS (Complex Nonlinear Least Squares) allows 
+        to determine the values of the electrochemical parameters for each circuit element \citep{boukamp1986}.
+
+        Parameters such as effective capacitance, oxide thickness and diffusion coefficient can be computed.
+        \vfill
+        \begin{columns}
+            \column{0.5\textwidth}
+            \tiny
+            \begin{tabular}{lll}
+                \toprule
+                Name                               & A                 & B               \\ \midrule
+                $R_{el}$                           & $31 \pm 1$        & $99 \pm 2$      \\
+                $R_{ct}$                           & $190 \pm 20$      & $280 \pm 2$     \\
+                $W$                                & $3000 \pm 400$    & $5000 \pm 300$  \\
+                $n$                                & $0.36 \pm 0.01$   & $0.49 \pm 0.01$ \\
+                $\tau$                             & $120 \pm 40$      & $62 \pm 5$      \\
+                $Q_{ox} \cdot 10^6 $               & $56 \pm 8$        & $102 \pm 8$     \\
+                $a_{ox}$                           & $0.69 \pm 0.02$   & $0.60 \pm 0.01$ \\
+                $\delta(\mu m)$                    & $0.10 \pm 0.03$   & $0.15 \pm 0.05$ \\
+                $D \cdot 10^{12} (cm^2 \cdot s^{-1})$& $1.7 \pm 0.5$     & $1.9 \pm 0.9$   \\
+                \bottomrule
+            \end{tabular}
+            \column{0.5\textwidth}
+            \small
+            $$ Z_{CPE}(\omega) = \frac{1}{Q(j\omega)^{\alpha}} $$
+            $$ C = Q^{1/\alpha} \cdot R_{ct}^{\frac{\alpha - 1}{\alpha}} = \frac{\epsilon \epsilon _0 A}{\delta} $$
+            $$ Z_{W_{\delta}}(\omega) = R_{\delta}\frac{\tanh \sqrt{(j\omega \tau)}}{\sqrt{j\omega \tau}} $$
+            $$ \tau = \frac{\delta ^2}{D} $$
+        \end{columns}
     \end{frame}
 
 \section{Conclusion}
