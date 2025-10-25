@@ -200,6 +200,19 @@ return {
         { trig = "jwt"},
         { t("j\\omega t") }
     ),
+    s(
+        { trig = "tanh" },
+        { t("\\tanh") }
+    ),
+    s(
+        { trig = ";_", snippetType="autosnippet", wordTrig=false },
+        { t("_{}") }
+    ),
+    s(
+        { trig = ";^", snippetType="autosnippet", wordTrig=false },
+        { t("^{}") }
+    ),
+
 
     -- sections
     s({trig = "h1", condition = line_begin },
