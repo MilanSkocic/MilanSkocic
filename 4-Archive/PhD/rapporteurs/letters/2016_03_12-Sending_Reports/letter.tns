@@ -1,2 +1,0 @@
-\expandafter\def\csname newletter1\endcsname{2}
-\expandafter\def\csname newletter2\endcsname{2}
