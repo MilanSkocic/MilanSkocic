@@ -1,5 +1,0 @@
-make
-
-make tests
-
-make install
