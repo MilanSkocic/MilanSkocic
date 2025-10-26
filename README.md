@@ -6,7 +6,10 @@
 * [ORCID: 0000-0003-2189-5766](https://www.orcid.org/0000-0003-2189-5766)
 * 19 Avenue Nicéphore Niepce, 71100 Chalon-Sur-Saône.
 
-Download the PDF versions: [EN](./04-latex/00-cv/pdf/cv-milan_skocic-en.pdf) [FR](./04-latex/00-cv/pdf/cv-milan_skocic-fr.pdf) [SRB](./04-latex/00-cv/pdf/cv-milan_skocic-sr.pdf)
+Download the PDF versions: 
+[EN](https://github.com/MilanSkocic/cv/blob/main/pdf/cv-milan_skocic-en.pdf) 
+[FR](https://github.com/MilanSkocic/cv/blob/main/pdf/cv-milan_skocic-fr.pdf) 
+[SRB](https://github.com/MilanSkocic/cv/blob/main/pdf/cv-milan_skocic-sr.pdf)
 
 # About me
 
